@@ -1,7 +1,7 @@
 package collins.solr
 
 import collins.callbacks.CallbackActionHandler
-import models.{Asset, AssetMetaValue, AssetLog, IpAddresses}
+import collins.models.{Asset, AssetMetaValue, AssetLog, IpAddresses}
 
 import akka.actor._
 import play.api.Logger

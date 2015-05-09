@@ -1,9 +1,8 @@
 package collins.graphs
 
-import models.asset.AssetView
+import collins.models.asset.AssetView
 
 import java.net.URLEncoder
-import play.api.libs.json._
 import com.codahale.jerkson.Json._
 
 import play.api.Application

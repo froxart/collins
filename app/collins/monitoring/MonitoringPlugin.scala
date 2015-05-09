@@ -1,7 +1,7 @@
 package collins.monitoring
 
-import models.asset.AssetView
-import util.config.TypesafeConfiguration
+import collins.models.asset.AssetView
+import collins.util.config.TypesafeConfiguration
 
 import play.api.{Application, Plugin}
 import play.api.mvc.Content

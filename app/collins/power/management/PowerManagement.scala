@@ -2,7 +2,7 @@ package collins.power.management
 
 import collins.power._
 import scala.concurrent.Future
-import models.Asset
+import collins.models.Asset
 
 trait PowerManagement {
   sealed trait PowerCommandStatus {

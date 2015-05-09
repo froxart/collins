@@ -1,7 +1,7 @@
 package collins.solr
 
-import models.{AssetMeta, AssetType, State, Status}
-import models.IpmiInfo.Enum._
+import collins.models.{AssetMeta, AssetType, State, Status}
+import collins.models.IpmiInfo.Enum._
 
 import Solr.AssetSolrDocument
 import AssetMeta.ValueType

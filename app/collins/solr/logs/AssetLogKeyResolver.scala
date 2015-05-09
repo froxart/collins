@@ -4,8 +4,8 @@ import SolrKeyFlag._
 
 
 import Solr.AssetSolrDocument
-import models.AssetMeta.ValueType._
-import models.logs.LogMessageType
+import collins.models.AssetMeta.ValueType._
+import collins.models.logs.LogMessageType
 
 object AssetLogKeyResolver extends SolrKeyResolver {
 

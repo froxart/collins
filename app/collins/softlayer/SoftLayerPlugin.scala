@@ -1,10 +1,10 @@
 package collins.softlayer
 
-import models.Asset
+import collins.models.Asset
 import play.api.libs.ws.WS
 
 import play.api.{Application, Plugin}
-import play.api.libs.json._
+import play.api.libs.json.{Json, JsString, JsObject, JsNumber, JsBoolean, JsArray}
 import scala.concurrent.Future
 import org.jboss.netty.handler.codec.http.QueryStringEncoder
 import scala.util.control.Exception.allCatch

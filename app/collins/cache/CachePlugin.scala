@@ -1,5 +1,4 @@
-package collins
-package cache
+package collins.cache
 
 import play.api.{Application, PlayException, Plugin}
 

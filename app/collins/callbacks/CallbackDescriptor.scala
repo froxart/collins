@@ -1,7 +1,6 @@
-package collins
-package callbacks
+package collins.callbacks
 
-import util.config.{ConfigAccessor, ConfigSource, ConfigValue, TypesafeConfiguration}
+import collins.util.config.{ConfigAccessor, ConfigSource, ConfigValue, TypesafeConfiguration}
 import com.typesafe.config.ConfigValueType
 
 import play.api.Logger

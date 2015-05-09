@@ -1,8 +1,9 @@
 package collins.solr
 
-import models.{Asset, AssetFinder, AssetMeta, AssetMetaValue, AssetType, IpAddresses, MetaWrapper, Page, PageParams, State, Status, Truthy}
-import models.asset.AssetView
-import models.IpmiInfo.Enum._
+import collins.models.{Asset, AssetFinder, AssetMeta, AssetMetaValue, AssetType, IpAddresses, MetaWrapper, State, Status, Truthy}
+import collins.models.shared.{Page, PageParams}
+import collins.models.asset.AssetView
+import collins.models.IpmiInfo.Enum._
 
 import play.api.Logger
 

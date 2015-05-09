@@ -1,7 +1,7 @@
 package collins.softlayer
 
 import collins.power.management.PowerManagement
-import models.Asset
+import collins.models.Asset
 
 import play.api.Logger
 import scala.concurrent.Future

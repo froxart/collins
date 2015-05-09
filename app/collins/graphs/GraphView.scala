@@ -1,6 +1,6 @@
 package collins.graphs
 
-import models.asset.AssetView
+import collins.models.asset.AssetView
 import play.api.Application
 import play.api.mvc.Content
 

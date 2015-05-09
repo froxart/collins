@@ -4,9 +4,9 @@ import collins.solr._
 
 import java.util.Date
 
-import models.Asset
+import collins.models.Asset
 
-import util.views.Formatter
+import collins.util.views.Formatter
 
 import Solr._
 

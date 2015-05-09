@@ -1,7 +1,8 @@
 package collins.solr
 
-import models.{Asset, AssetLog, Page, PageParams, SortDirection}
-import models.asset.AssetView
+import collins.models.{Asset, AssetLog}
+import collins.models.shared.{Page, PageParams, SortDirection}
+import collins.models.asset.AssetView
 
 import play.api.Logger
 import org.apache.solr.client.solrj.{SolrQuery, SolrServerException}

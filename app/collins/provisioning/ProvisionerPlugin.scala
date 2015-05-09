@@ -2,7 +2,7 @@ package collins.provisioning
 
 import collins.cache.ConfigCache
 import collins.shell.{Command, CommandResult}
-import models.Asset
+import collins.models.Asset
 import play.api.{Application, Plugin}
 import play.api.libs.concurrent.Akka
 import play.api.Play.current

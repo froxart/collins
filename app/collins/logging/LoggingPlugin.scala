@@ -1,5 +1,4 @@
-package collins
-package logging
+package collins.logging
 
 import play.api.{Application, Logger, Play, Plugin}
 import java.io.File

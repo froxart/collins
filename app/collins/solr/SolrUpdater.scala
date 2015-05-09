@@ -2,7 +2,7 @@ package collins.solr
 
 import akka.actor._
 import play.api.Logger
-import models.{Asset, AssetLog}
+import collins.models.{Asset, AssetLog}
 import java.util.Collections
 import java.util.Date
 import java.util.concurrent.ConcurrentHashMap

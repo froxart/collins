@@ -1,6 +1,6 @@
 package collins.monitoring
 
-import util.config.Configurable
+import collins.util.config.Configurable
 import collins.cache.ConfigCache
 
 object MonitoringConfig extends Configurable {

@@ -1,6 +1,6 @@
 package collins.graphs
 
-import models.{PageParams, SortDirection}
+import collins.models.shared.{PageParams, SortDirection}
 import collins.solr.{CollinsQueryParser, AssetSearchQuery, AssetDocType}
 
 import play.api.Logger

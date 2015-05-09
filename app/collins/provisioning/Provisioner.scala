@@ -1,6 +1,6 @@
 package collins.provisioning
 
-import models.Asset
+import collins.models.Asset
 import play.api.Logger
 import collins.shell.CommandResult
 

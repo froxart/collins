@@ -1,7 +1,7 @@
 package collins.solr
 
-import util.config.Configurable
-import util.MessageHelper
+import collins.util.config.Configurable
+import collins.util.MessageHelper
 import java.io.File
 import scala.concurrent.duration._
 

@@ -6,7 +6,7 @@ import play.api.PlayException
 
 import scala.util.parsing.combinator._
 
-import util.views.Formatter
+import collins.util.views.Formatter
 
 import Solr.AssetSolrDocument
 

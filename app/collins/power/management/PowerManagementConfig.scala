@@ -1,9 +1,9 @@
-package collins.power
-package management
+package collins.power.management
 
-import models.{Asset, AssetType, Status}
-import util.MessageHelper
-import util.config.{Configurable, ConfigValue}
+import collins.power.PowerAction
+import collins.models.{Asset, AssetType, Status}
+import collins.util.MessageHelper
+import collins.util.config.{Configurable, ConfigValue}
 
 object PowerManagementConfig extends Configurable {
 

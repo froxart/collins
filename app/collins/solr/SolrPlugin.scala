@@ -3,10 +3,11 @@ package collins.solr
 import akka.actor._
 import scala.concurrent.duration._
 import java.util.Date
-import models.{Asset, AssetFinder, AssetLog, AssetMeta, AssetMetaValue, AssetType, IpAddresses, MetaWrapper, Page, PageParams, Status, Truthy}
-import models.asset.AssetView
-import models.IpmiInfo.Enum._
-import models.SortDirection._
+import collins.models.{Asset, AssetFinder, AssetLog, AssetMeta, AssetMetaValue, AssetType, IpAddresses, MetaWrapper, Status, Truthy}
+import collins.models.shared.{Page, PageParams}
+import collins.models.asset.AssetView
+import collins.models.IpmiInfo.Enum._
+import collins.models.shared.SortDirection._
 import org.apache.solr.client.solrj.{SolrServer, SolrQuery}
 import org.apache.solr.client.solrj.embedded.EmbeddedSolrServer
 import org.apache.solr.common.{SolrDocument, SolrInputDocument}
@@ -16,9 +17,9 @@ import play.api.{Application, Logger, Play, PlayException, Plugin}
 import play.api.libs.concurrent.Akka
 import play.api.Play.current
 import akka.actor.Props
-import util.AttributeResolver
-import util.plugins.Callback
-import util.views.Formatter
+import collins.util.AttributeResolver
+import collins.util.plugins.Callback
+import collins.util.views.Formatter
 import AssetMeta.ValueType
 import AssetMeta.ValueType._
 import CollinsQueryDSL._

@@ -1,6 +1,6 @@
 package collins.graphs
 
-import util.config.Configurable
+import collins.util.config.Configurable
 import collins.cache.ConfigCache
 
 object GraphConfig extends Configurable {

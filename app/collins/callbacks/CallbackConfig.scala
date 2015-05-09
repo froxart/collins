@@ -1,7 +1,6 @@
-package collins
-package callbacks
+package collins.callbacks
 
-import util.config.Configurable
+import collins.util.config.Configurable
 import play.api.Logger
 
 object CallbackConfig extends Configurable {

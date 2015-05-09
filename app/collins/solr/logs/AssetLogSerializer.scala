@@ -2,11 +2,11 @@
 package collins.solr
 
 import collins.solr._
-import util.views.Formatter
+import collins.util.views.Formatter
 
 import java.util.Date
 
-import models.{Asset, AssetMeta, AssetMetaValue, AssetLog, IpAddresses, IpmiInfo, MetaWrapper, Truthy}
+import collins.models.{Asset, AssetMeta, AssetMetaValue, AssetLog, IpAddresses, IpmiInfo, MetaWrapper, Truthy}
 import AssetMeta.ValueType
 import AssetMeta.ValueType._
 

@@ -1,9 +1,9 @@
 package collins.provisioning
 
 import collins.validation.File
-import models.{AssetType, Status}
-import util.concurrent.RateLimit
-import util.config.{Configurable, ConfigValue}
+import collins.models.{AssetType, Status}
+import collins.util.concurrent.RateLimit
+import collins.util.config.{Configurable, ConfigValue}
 
 object ProvisionerConfig extends Configurable {
   override val namespace = "provisioner"

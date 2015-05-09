@@ -1,5 +1,4 @@
-package collins
-package callbacks
+package collins.callbacks
 
 import java.beans.{PropertyChangeEvent, PropertyChangeListener, PropertyChangeSupport}
 import play.api.{Application, Configuration, Logger, Plugin}
