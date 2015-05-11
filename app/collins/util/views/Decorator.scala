@@ -2,8 +2,6 @@ package collins.util.views
 
 import collins.models.MetaWrapper
 
-import play.api.mvc.Content
-
 case class DecoratorConfigException(source: String, key: String)
   extends Exception("Didn't find key %s in decorator configuration for %s".format(key, source))
 

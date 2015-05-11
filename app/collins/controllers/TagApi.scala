@@ -1,11 +1,13 @@
 package collins.controllers
 
-import collins.models.{AssetMeta, AssetMetaValue}
-import collins.util.config.Feature
-import play.api.mvc.Results
-import play.api.libs.json.JsString
-import play.api.libs.json.JsObject
 import play.api.libs.json.JsArray
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsString
+import play.api.mvc.Results
+
+import collins.models.AssetMeta
+import collins.models.AssetMetaValue
+import collins.util.config.Feature
 
 trait TagApi {
   this: Api with SecureController =>

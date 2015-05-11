@@ -1,8 +1,12 @@
 package collins.util
 
-import config.{AppConfig, Feature}
-import collins.models._
-import collins.models.logs._
+import collins.models.Asset
+import collins.models.AssetLog
+import collins.models.User
+import collins.models.logs.LogFormat
+import collins.models.logs.LogSource
+
+import collins.util.config.Feature
 
 trait TattlerHelper {
   val pString: Option[String] = None

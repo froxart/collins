@@ -1,13 +1,21 @@
 package collins.models
 
-import asset.AssetView
-import shared.{AddressPool, IpAddressConfig}
+import org.squeryl.PrimitiveTypeMode._
+import org.squeryl.dsl.ast.LogicalBoolean
 
 import play.api.libs.json.Json
-import collins.util.{IpAddress, IpAddressCalc}
-import collins.util.plugins.Callback
-import org.squeryl.dsl.ast.LogicalBoolean
-import collins.models.shared.{IpAddressable, IpAddressStorage, Page, PageParams}
+
+import collins.models.asset.AssetView
+import collins.models.shared.AddressPool
+import collins.models.shared.IpAddressConfig
+import collins.models.shared.IpAddressStorage
+import collins.models.shared.IpAddressable
+import collins.models.shared.Page
+import collins.models.shared.PageParams
+import collins.util.IpAddress
+import collins.util.IpAddressCalc
+
+import conversions.IpAddressFormat
 
 case class IpAddresses(
   asset_id: Long,

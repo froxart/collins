@@ -1,16 +1,17 @@
 package collins.controllers.actions.asset
 
+import play.api.mvc.Result
+
+import collins.controllers.ResponseData
 import collins.controllers.SecureController
-import collins.controllers.actions.SecureAction
 import collins.controllers.actions.AssetAction
 import collins.controllers.actions.RequestDataHolder
-import collins.controllers.ResponseData
-
+import collins.controllers.actions.SecureAction
 import collins.models.Asset
 import collins.util.RemoteCollinsHost
 import collins.util.security.SecuritySpecification
+
 import views.html
-import play.api.mvc.Result
 
 case class GetAction(
   assetTag: String,

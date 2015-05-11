@@ -1,8 +1,9 @@
 package collins.controllers
 
-import actions.asset.{
-  PowerManagementAction, PowerStatusAction, ProvisionAction, GetProvisioningProfilesAction
-}
+import collins.controllers.actions.asset.GetProvisioningProfilesAction
+import collins.controllers.actions.asset.PowerManagementAction
+import collins.controllers.actions.asset.PowerStatusAction
+import collins.controllers.actions.asset.ProvisionAction
 
 trait AssetManagementApi {
   this: Api with SecureController =>

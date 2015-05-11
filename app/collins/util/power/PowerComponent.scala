@@ -1,7 +1,12 @@
 package collins.util.power
 
+import play.api.libs.json.Format
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsSuccess
+import play.api.libs.json.JsValue
+import play.api.libs.json.Json
+
 import collins.models.AssetMeta
-import play.api.libs.json.{Format, Json, JsObject, JsValue, JsSuccess}
 
 /** A power related component (distribution unit, strip, outlet, etc) */
 sealed trait PowerComponent extends Ordered[PowerComponent] {

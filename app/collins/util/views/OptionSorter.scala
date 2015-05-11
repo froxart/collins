@@ -1,6 +1,6 @@
 package collins.util.views
 
-import Formatter.camelCase
+import collins.util.views.Formatter.camelCase
 
 object OptionSorter {
 

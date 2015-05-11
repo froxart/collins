@@ -1,23 +1,24 @@
 package collins.controllers.actions.ipaddress
 
-import collins.controllers.SecureController
-import collins.controllers.Api
-import collins.controllers.validators.ParamValidation
-
-import collins.controllers.actions.SecureAction
-import collins.controllers.actions.AssetAction
-import collins.controllers.actions.RequestDataHolder
-import collins.controllers.actions.EphemeralDataHolder
-
-import collins.validation.StringUtil
-import collins.models.{Asset, IpAddresses}
-import collins.models.shared.IpAddressConfig
-import collins.util.{ApiTattler, IpAddress}
-import collins.util.security.SecuritySpecification
+import java.sql.SQLException
 
 import play.api.data.Form
 import play.api.data.Forms.tuple
-import java.sql.SQLException
+
+import collins.controllers.Api
+import collins.controllers.SecureController
+import collins.controllers.actions.AssetAction
+import collins.controllers.actions.EphemeralDataHolder
+import collins.controllers.actions.RequestDataHolder
+import collins.controllers.actions.SecureAction
+import collins.controllers.validators.ParamValidation
+import collins.models.Asset
+import collins.models.IpAddresses
+import collins.models.shared.IpAddressConfig
+import collins.util.ApiTattler
+import collins.util.IpAddress
+import collins.util.security.SecuritySpecification
+import collins.validation.StringUtil
 
 case class UpdateAction(
   assetTag: String,

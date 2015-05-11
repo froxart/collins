@@ -1,9 +1,17 @@
 package collins.util.parsers
 
+import scala.xml.Elem
+import scala.xml.NodeSeq
+import scala.xml.XML
+
+import collins.models.lldp.Chassis
+import collins.models.lldp.ChassisId
+import collins.models.lldp.Interface
+import collins.models.lldp.Port
+import collins.models.lldp.PortId
+import collins.models.lldp.Vlan
 import collins.util.LldpRepresentation
-import collins.models.lldp._
 import collins.util.config.LldpConfig
-import scala.xml.{Elem, MalformedAttributeException, Node, NodeSeq, XML}
 
 class LldpParser(txt: String) extends CommonParser[LldpRepresentation](txt) {
   override def parse(): Either[Throwable,LldpRepresentation] = {

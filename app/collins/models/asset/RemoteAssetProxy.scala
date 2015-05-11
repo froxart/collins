@@ -1,10 +1,11 @@
 package collins.models.asset
 
-import conversions._
-import play.api.libs.json.JsValue
 import play.api.libs.json.JsObject
-import play.api.libs.json.Json
 import play.api.libs.json.JsString
+import play.api.libs.json.JsValue
+import play.api.libs.json.Json
+
+import collins.models.asset.conversions.AssetFormat
 
 abstract class RemoteAssetProxy(jsonAsset: JsValue) extends RemoteAsset {
 

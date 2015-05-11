@@ -1,15 +1,23 @@
 package collins.models
 
-import conversions._
-
-import org.squeryl.PrimitiveTypeMode._
-import org.squeryl.dsl.ast.{BinaryOperatorNodeLogicalBoolean, LogicalBoolean}
-import collins.solr._
-import IpmiInfo.Enum._
-
-import collins.util.views.Formatter
-
 import java.util.Date
+
+import org.squeryl.PrimitiveTypeMode.int2ScalarInt
+import org.squeryl.PrimitiveTypeMode.string2ScalarString
+import org.squeryl.PrimitiveTypeMode.timestamp2ScalarTimestamp
+import org.squeryl.PrimitiveTypeMode.timestamp2ScalarTimestampOptionNode
+import org.squeryl.dsl.ast.BinaryOperatorNodeLogicalBoolean
+import org.squeryl.dsl.ast.LogicalBoolean
+
+import collins.models.conversions.dateToTimestamp
+import collins.solr.SolrExpression
+import collins.solr.SolrIntValue
+import collins.solr.SolrKeyRange
+import collins.solr.SolrKeyVal
+import collins.solr.SolrStringValue
+import collins.solr.StrictUnquoted
+import collins.solr.StringValueFormat
+import collins.util.views.Formatter
 
 case class AssetFinder(
   tag: Option[String],

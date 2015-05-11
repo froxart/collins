@@ -1,6 +1,3 @@
-import collins.database.DatabasePlugin
-
-import collins.controllers.ApiResponse
 import play.api.Application
 import play.api.GlobalSettings
 import play.api.Logger
@@ -10,6 +7,9 @@ import play.api.mvc.Handler
 import play.api.mvc.RequestHeader
 import play.api.mvc.Result
 import play.api.mvc.Results
+
+import collins.controllers.ApiResponse
+import collins.database.DatabasePlugin
 import collins.util.BashOutput
 import collins.util.CryptoAccessor
 import collins.util.JsonOutput

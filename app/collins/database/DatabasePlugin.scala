@@ -1,6 +1,8 @@
 package collins.database
 
-import play.api.{Application, Logger, Play, Plugin}
+import play.api.Application
+import play.api.Plugin
+
 import collins.models.shared.Model
 
 class DatabasePlugin(app: Application) extends Plugin {

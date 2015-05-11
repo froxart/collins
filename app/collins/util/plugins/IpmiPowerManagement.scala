@@ -1,13 +1,19 @@
 package collins.util.plugins
 
-import collins.util.IpmiCommand
-import collins.models.{Asset, IpmiInfo}
-import play.api.{Application, Plugin}
-import collins.power._
-import collins.power.management._
-import scala.concurrent.duration._
-import collins.util.concurrent.BackgroundProcessor
 import java.util.concurrent.TimeUnit
+
+import scala.concurrent.duration._
+
+import play.api.Application
+import play.api.Plugin
+import collins.power._
+
+import collins.util.IpmiCommand
+import collins.models.Asset
+import collins.models.IpmiInfo
+
+import collins.power.management._
+import collins.util.concurrent.BackgroundProcessor
 
 case class IpmiPowerCommand(
   override val ipmiCommand: String,

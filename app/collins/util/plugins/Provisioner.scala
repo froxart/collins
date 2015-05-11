@@ -1,6 +1,7 @@
 package collins.util.plugins
 
 import play.api.Play
+
 import collins.provisioning.ProvisionerPlugin
 
 object Provisioner {

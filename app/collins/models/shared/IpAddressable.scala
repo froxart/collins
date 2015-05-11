@@ -1,11 +1,16 @@
 package collins.models.shared
 
-import collins.models.Asset
-import collins.util.{IpAddress, IpAddressCalc}
-import org.squeryl.Schema
-import play.api.Logger
 import java.sql.SQLException
-import collection.immutable.SortedSet
+
+import scala.collection.immutable.SortedSet
+
+import play.api.Logger
+
+import org.squeryl.Schema
+
+import collins.models.Asset
+import collins.util.IpAddress
+import collins.util.IpAddressCalc
 
 trait IpAddressable extends ValidatedEntity[Long] {
 

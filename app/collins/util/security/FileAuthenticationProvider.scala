@@ -1,12 +1,12 @@
 package collins.util.security
 
+import java.security.MessageDigest
+
 import collins.cache.ConfigCache
-import collins.models.{User, UserImpl}
+import collins.models.User
+import collins.models.UserImpl
 
 import sun.misc.BASE64Encoder
-import java.io.File
-import java.security.MessageDigest
-import io.Source
 
 class FileAuthenticationProvider() extends AuthenticationProvider {
 

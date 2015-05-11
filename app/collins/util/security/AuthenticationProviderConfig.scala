@@ -1,6 +1,7 @@
 package collins.util.security
 
-import collins.util.config.{Configurable, ConfigValue}
+import collins.util.config.ConfigValue
+import collins.util.config.Configurable
 import collins.validation.File
 
 object AuthenticationProviderConfig extends Configurable {

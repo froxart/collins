@@ -1,9 +1,9 @@
 package collins.util.views
 
-import collins.models.MetaWrapper
-
 import play.api.mvc.Content
 import play.api.templates.Html
+
+import collins.models.MetaWrapper
 
 object TagDecorator {
 

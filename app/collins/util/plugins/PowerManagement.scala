@@ -1,11 +1,12 @@
 package collins.util.plugins
 
-import collins.power.PowerAction
-import collins.power.management.{PowerManagement => PowerManagementTrait, PowerManagementConfig}
-import collins.models.{Asset, AssetType, Status}
-import collins.util.config.{Configurable, ConfigValue}
+import play.api.Logger
+import play.api.Play
 
-import play.api.{Play, Logger}
+import collins.models.Asset
+import collins.power.PowerAction
+import collins.power.management.{PowerManagement => PowerManagementTrait}
+import collins.power.management.PowerManagementConfig
 
 object PowerManagement {
   protected[this] val logger = Logger(getClass)

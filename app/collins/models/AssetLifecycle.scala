@@ -1,20 +1,28 @@
 package collins.models
 
-import conversions._
-import AssetMeta.Enum.RackPosition
-import collins.models.{Status => AStatus}
-import collins.models.logs._
+import java.util.Date
 
-import collins.util.{ApiTattler, AssetStateMachine, InternalTattler, LldpRepresentation, LshwRepresentation, SystemTattler}
-import collins.util.config.{Feature, LshwConfig}
-import collins.util.parsers.{LldpParser, LshwParser}
-import collins.solr.Solr
-import collins.util.power.PowerUnits
+import scala.util.control.Exception.allCatch
 
 import play.api.Logger
 
-import scala.util.control.Exception.allCatch
-import java.util.Date
+import collins.models.conversions._
+import collins.models.AssetMeta.Enum.RackPosition
+import collins.models.{Status => AStatus}
+import collins.models.logs._
+
+import collins.util.ApiTattler
+import collins.util.AssetStateMachine
+import collins.util.InternalTattler
+import collins.util.LldpRepresentation
+import collins.util.LshwRepresentation
+import collins.util.SystemTattler
+import collins.util.config.Feature
+import collins.util.config.LshwConfig
+import collins.util.parsers.LldpParser
+import collins.util.parsers.LshwParser
+import collins.solr.Solr
+import collins.util.power.PowerUnits
 
 object AssetLifecycleConfig {
   // Don't want people trying to set status/tag/etc via attribute

@@ -1,8 +1,8 @@
 package collins.models
 
-import scala.math
-import collins.util.config.NodeclassifierConfig
 import play.api.Logger
+
+import collins.util.config.NodeclassifierConfig
 
 trait AssetDistanceEval {
 

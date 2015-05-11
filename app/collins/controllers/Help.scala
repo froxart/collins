@@ -1,11 +1,12 @@
 package collins.controllers
 
+import scala.collection.immutable.DefaultMap
+
 import play.api.mvc.Controller
 
 import collins.util.MessageHelper
-import views.html
 
-import collection.immutable.DefaultMap
+import views.html
 
 object Help extends MessageHelper("help") with DefaultMap[String,String] {
 

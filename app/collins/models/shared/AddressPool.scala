@@ -1,7 +1,8 @@
 package collins.models.shared
 
-import collins.util.{IpAddress, IpAddressCalc, MessageHelper}
-import collins.util.concurrent.LockingBitSet
+import collins.util.IpAddress
+import collins.util.IpAddressCalc
+import collins.util.MessageHelper
 import collins.util.config.SimpleAddressConfig
 
 case class AddressPool(

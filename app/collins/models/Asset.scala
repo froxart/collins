@@ -1,16 +1,25 @@
 package collins.models
 
-import asset.{AssetView, AllAttributes}
-import asset.conversions._
-import conversions._
-import collins.util.{AttributeResolver, LldpRepresentation, LshwRepresentation, MessageHelper, Stats}
-import collins.util.config.{Feature, MultiCollinsConfig, NodeclassifierConfig}
+import collins.models.asset.AssetView
+import collins.models.asset.AllAttributes
+import collins.models.asset.conversions._
+import collins.models.conversions._
+import collins.util.AttributeResolver
+import collins.util.LldpRepresentation
+import collins.util.LshwRepresentation
+import collins.util.MessageHelper
+import collins.util.Stats
+import collins.util.config.Feature
+import collins.util.config.MultiCollinsConfig
+import collins.util.config.NodeclassifierConfig
 import collins.util.plugins.Cache
 import collins.util.power.PowerUnits
 import collins.util.views.Formatter.dateFormat
-import collins.solr._
-import shared.QueryLogConfig
-import AssetSort.Type
+import collins.solr.CQLQuery
+import collins.solr.AssetDocType
+import collins.solr.AssetSearchQuery
+import collins.models.shared.QueryLogConfig
+import collins.models.AssetSort.Type
 
 import collins.validation.Pattern.isAlphaNumericString
 
@@ -25,12 +34,12 @@ import org.squeryl.Schema
 import java.sql.Timestamp
 import java.util.Date
 
-import shared.SortDirection._
-import shared.ValidatedEntity
-import shared.AnormAdapter
-import shared.Page
-import shared.PageParams
-import shared.SortDirection
+import collins.models.shared.SortDirection._
+import collins.models.shared.ValidatedEntity
+import collins.models.shared.AnormAdapter
+import collins.models.shared.Page
+import collins.models.shared.PageParams
+import collins.models.shared.SortDirection
 
 case class Asset(tag: String, status: Int, asset_type: Int,
     created: Timestamp, updated: Option[Timestamp], deleted: Option[Timestamp],

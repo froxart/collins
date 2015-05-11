@@ -1,22 +1,31 @@
 package collins.models
 
-import asset.{AssetView, BasicRemoteAsset, DetailedRemoteAsset, RemoteAsset}
-import collins.util.RemoteCollinsHost
-import collins.util.AttributeResolver.ResultTuple
-import play.api.Logger
-import play.api.libs.json.Json
-import play.api.libs.ws.WS
-import play.api.cache.Cache
-import play.api.Play.current
 import java.net.URLEncoder
 import java.util.concurrent.TimeoutException
-import collins.solr._
+
 import scala.concurrent.Await
-import scala.concurrent.duration._
+import scala.concurrent.duration.DurationInt
+
+import play.api.Logger
+import play.api.Play.current
+import play.api.cache.Cache
 import play.api.libs.json.JsArray
 import play.api.libs.json.JsObject
+import play.api.libs.json.Json
+import play.api.libs.ws.WS
 
-import shared.PageParams
+import collins.models.asset.AssetView
+import collins.models.asset.BasicRemoteAsset
+import collins.models.asset.DetailedRemoteAsset
+import collins.models.shared.PageParams
+import collins.solr.EmptySolrQuery
+import collins.solr.SolrAndOp
+import collins.solr.SolrExpression
+import collins.solr.SolrKeyVal
+import collins.solr.SolrOrOp
+import collins.solr.StringValueFormat
+import collins.util.AttributeResolver.ResultTuple
+import collins.util.RemoteCollinsHost
 
 /**
  * Just a combination of everything needed to do a search.  Probably should

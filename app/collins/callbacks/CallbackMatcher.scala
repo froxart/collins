@@ -1,8 +1,9 @@
 package collins.callbacks
 
+import java.beans.PropertyChangeEvent
+
 import collins.models.State
 import collins.models.asset.AssetView
-import java.beans.{PropertyChangeEvent, PropertyChangeListener, PropertyChangeSupport}
 import collins.reflection.MethodHelper
 
 /**

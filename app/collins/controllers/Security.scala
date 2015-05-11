@@ -1,20 +1,21 @@
 package collins.controllers
 
+import org.apache.commons.codec.binary.Base64
+
 import play.api.Logger
 import play.api.http.HeaderNames
-import play.api.mvc.RequestHeader
-import play.api.templates.Txt
-import collins.models.User
-import collins.util.config.AppConfig
-import collins.util.security.SecuritySpecification
-import collins.util.security.AuthenticationProvider
-import org.apache.commons.codec.binary.Base64
 import play.api.mvc.Action
 import play.api.mvc.AnyContent
 import play.api.mvc.Controller
 import play.api.mvc.Request
+import play.api.mvc.RequestHeader
 import play.api.mvc.Result
 import play.api.mvc.Results
+import play.api.templates.Txt
+
+import collins.models.User
+import collins.util.security.AuthenticationProvider
+import collins.util.security.SecuritySpecification
 
 /**
  * Provide a secure controller implementation.

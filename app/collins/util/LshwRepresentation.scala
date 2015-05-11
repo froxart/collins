@@ -1,7 +1,21 @@
 package collins.util
 
-import collins.models.lshw.{ServerBase, Cpu, Disk, Memory, Nic}
-import play.api.libs.json.{Format, JsSuccess, JsObject, Json, JsValue}
+import play.api.libs.json.Format
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsSuccess
+import play.api.libs.json.JsValue
+import play.api.libs.json.Json
+
+import collins.models.lshw.Cpu
+import collins.models.lshw.Cpu.CpuFormat
+import collins.models.lshw.Disk
+import collins.models.lshw.Disk.DiskFormat
+import collins.models.lshw.Memory
+import collins.models.lshw.Memory.MemoryFormat
+import collins.models.lshw.Nic
+import collins.models.lshw.Nic.NicFormat
+import collins.models.lshw.ServerBase
+import collins.models.lshw.ServerBase.ServerbaseFormat
 
 object LshwRepresentation {
   def empty(): LshwRepresentation = {

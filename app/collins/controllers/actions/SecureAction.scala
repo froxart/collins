@@ -1,34 +1,34 @@
 package collins.controllers.actions
 
-import collins.models.User
-import collins.util.OutputType
-import collins.util.config.AppConfig
-import collins.util.security.SecuritySpecification
+import java.util.concurrent.atomic.AtomicReference
 
-import collins.controllers.SecureController
-import collins.controllers.ResponseData
-import collins.controllers.Api
+import scala.concurrent.Future
 
 import play.api.Logger
-import play.api.data.Form
-import scala.concurrent.Future
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import play.api.libs.concurrent.PurePromise
-import play.api.libs.json.{Json, JsValue, JsObject}
-import play.api.mvc.Result
-import play.api.mvc.Request
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsValue
 import play.api.mvc.Action
-import play.api.mvc.Call
-import play.api.mvc.Results
 import play.api.mvc.AnyContent
-import play.api.mvc.Flash
+import play.api.mvc.AsyncResult
 import play.api.mvc.BodyParser
 import play.api.mvc.BodyParsers
-import play.api.mvc.AsyncResult
+import play.api.mvc.Call
+import play.api.mvc.Flash
 import play.api.mvc.PlainResult
-import play.api.Play.current
-import play.api.libs.concurrent.Execution.Implicits._
+import play.api.mvc.Request
+import play.api.mvc.Result
+import play.api.mvc.Results
 
-import java.util.concurrent.atomic.AtomicReference
+import collins.controllers.Api
+import collins.controllers.ResponseData
+import collins.controllers.SecureController
+import collins.models.User
+import collins.util.OutputType
+import collins.util.security.SecuritySpecification
+
+import ActionHelper.DummyRequest
 
 
 // Override execute and validate, optionally handleError or handleWebError (if you support HTML
@@ -37,8 +37,6 @@ abstract class SecureAction(
   val securitySpecification: SecuritySpecification,
   val securityHandler: SecureController
 ) extends Action[AnyContent] {
-
-  import ActionHelper.DummyRequest
 
   type Validation = Either[RequestDataHolder,RequestDataHolder]
 

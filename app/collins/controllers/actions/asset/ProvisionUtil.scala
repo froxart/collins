@@ -2,30 +2,31 @@ package collins.controllers.actions.asset
 
 import scala.concurrent.Future
 
-import collins.provisioning.ProvisionerPlugin
-import collins.provisioning.ProvisionerProfile
-import collins.provisioning.ProvisionerRequest
-import collins.provisioning.{ProvisionerRoleData => ProvisionerRole}
+import play.api.data.Form
+import play.api.data.Forms.of
+import play.api.data.Forms.optional
+import play.api.data.Forms.text
+import play.api.data.Forms.tuple
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
+import play.api.mvc.Result
 
 import collins.controllers.Api
+import collins.controllers.actions.AssetAction
+import collins.controllers.actions.RequestDataHolder
+import collins.controllers.actions.SecureAction
 import collins.controllers.actors.ActivationProcessor
-import collins.controllers.actors.ProvisionerTest
 import collins.controllers.actors.ProvisionerResult
 import collins.controllers.actors.ProvisionerRun
-
-import collins.controllers.actions.SecureAction
-import collins.controllers.actions.RequestDataHolder
-import collins.controllers.actions.AssetAction
-
+import collins.controllers.actors.ProvisionerTest
+import collins.controllers.forms.truthyFormat
 import collins.models.Asset
 import collins.models.AssetLifecycle
 import collins.models.AssetMetaValue
 import collins.models.{Status => AStatus}
 import collins.models.Truthy
-import play.api.data.Form
-import play.api.data.Forms.{tuple, text, optional, of}
-import play.api.libs.concurrent.Execution.Implicits._
-import play.api.mvc.Result
+import collins.provisioning.ProvisionerPlugin
+import collins.provisioning.ProvisionerRequest
+import collins.provisioning.{ProvisionerRoleData => ProvisionerRole}
 import collins.util.ApiTattler
 import collins.util.UserTattler
 import collins.util.concurrent.BackgroundProcessor

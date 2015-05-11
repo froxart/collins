@@ -1,11 +1,21 @@
 package collins.models.shared
 
-import collins.util.{IpAddress, IpAddressCalc, MessageHelper}
-import collins.util.config.{Configurable, ConfigAccessor, ConfigValue, SimpleAddressConfig}
+import java.util.concurrent.ConcurrentHashMap
+import java.util.concurrent.ConcurrentLinkedQueue
+
+import scala.collection.JavaConverters.asScalaSetConverter
+import scala.collection.JavaConverters.collectionAsScalaIterableConverter
+import scala.collection.JavaConverters.enumerationAsScalaIteratorConverter
+import scala.collection.JavaConverters.mapAsJavaMapConverter
 
 import play.api.Logger
-import scala.collection.JavaConverters._
-import java.util.concurrent.{ConcurrentHashMap, ConcurrentLinkedQueue}
+
+import collins.util.MessageHelper
+import collins.util.config.Configurable
+import collins.util.config.SimpleAddressConfig
+import collins.util.config.TypesafeConfiguration
+
+import AddressPool.poolName
 
 /**
  * Represents an IP Address configuration.

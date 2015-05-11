@@ -1,7 +1,13 @@
 package collins.models
 
-import collins.util.power._
-import collection.immutable.SortedSet
+import scala.collection.immutable.SortedSet
+
+import collins.util.power.PowerUnits
+import collins.util.power.PowerConfiguration
+import collins.util.power.PowerUnit
+import collins.util.power.PowerComponent
+import collins.util.power.PowerComponentValue
+
 import collins.models.shared.CommonHelper
 
 object PowerHelper extends CommonHelper[PowerUnits] {

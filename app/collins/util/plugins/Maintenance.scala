@@ -1,6 +1,9 @@
 package collins.util.plugins
 
-import collins.models.{Asset, AssetLifecycle, State, Status}
+import collins.models.Asset
+import collins.models.AssetLifecycle
+import collins.models.State
+import collins.models.Status
 
 object Maintenance {
   def toMaintenance(asset: Asset, reason: String, state: State): Boolean = {

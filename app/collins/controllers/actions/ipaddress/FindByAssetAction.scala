@@ -1,12 +1,12 @@
 package collins.controllers.actions.ipaddress
 
-import collins.controllers.SecureController
 import collins.controllers.ResponseData
-import collins.controllers.actions.SecureAction
+import collins.controllers.SecureController
 import collins.controllers.actions.AssetAction
 import collins.controllers.actions.RequestDataHolder
-
-import collins.models.{Asset, IpAddresses}
+import collins.controllers.actions.SecureAction
+import collins.models.Asset
+import collins.models.IpAddresses
 import collins.util.security.SecuritySpecification
 
 // Get the addresses associated with an asset

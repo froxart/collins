@@ -1,19 +1,22 @@
 package collins.controllers.actions.logs
 
-import collins.controllers.SecureController
-import collins.controllers.ResponseData
+import play.api.libs.json.JsObject
+import play.api.libs.json.Json
 
-import collins.controllers.actions.SecureAction
+import collins.controllers.ResponseData
+import collins.controllers.SecureController
 import collins.controllers.actions.AssetAction
 import collins.controllers.actions.RequestDataHolder
-
-import collins.solr.{AssetLogDocType, TypedSolrExpression, CollinsQueryParser, AssetLogSearchQuery}
-
-import collins.models.{Asset, AssetLog}
-import collins.models.shared.{Page, PageParams}
+import collins.controllers.actions.SecureAction
+import collins.models.AssetLog
 import collins.models.conversions.AssetLogFormat
+import collins.models.shared.Page
+import collins.models.shared.PageParams
+import collins.solr.AssetLogDocType
+import collins.solr.AssetLogSearchQuery
+import collins.solr.CollinsQueryParser
+import collins.solr.TypedSolrExpression
 import collins.util.security.SecuritySpecification
-import play.api.libs.json.{Json, JsObject}
 
 case class SolrFindAction(
   query: String,

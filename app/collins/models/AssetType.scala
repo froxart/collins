@@ -1,11 +1,16 @@
 package collins.models
 
-import play.api.libs.json.{Format, JsValue, Json, JsSuccess, JsObject}
-
 import org.squeryl.PrimitiveTypeMode._
-import org.squeryl.{Schema, Table}
+import org.squeryl.Schema
 
-import shared.{ValidatedEntity, AnormAdapter}
+import play.api.libs.json.Format
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsSuccess
+import play.api.libs.json.JsValue
+import play.api.libs.json.Json
+
+import collins.models.shared.AnormAdapter
+import collins.models.shared.ValidatedEntity
 
 case class AssetType(name: String, label: String, id: Int = 0) extends ValidatedEntity[Int] {
   def getId(): Int = id

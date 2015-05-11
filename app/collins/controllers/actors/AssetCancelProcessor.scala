@@ -1,15 +1,23 @@
 package collins.controllers.actors
 
-import collins.controllers.ResponseData
-import collins.controllers.Api
-import scala.concurrent.duration._
-import collins.models.{Asset, AssetLifecycle, MetaWrapper, Status => AStatus}
-import play.api.mvc.{AnyContent, Request}
-import collins.util.plugins.SoftLayer
-import collins.util.concurrent.BackgroundProcess
-import scala.concurrent.{Await, ExecutionContext}
-import collins.softlayer.SoftLayerConfig
 import java.util.concurrent.TimeUnit
+
+import scala.concurrent.Await
+import scala.concurrent.duration.Duration
+import scala.concurrent.duration.FiniteDuration
+
+import play.api.mvc.AnyContent
+import play.api.mvc.Request
+
+import collins.controllers.Api
+import collins.controllers.ResponseData
+import collins.models.Asset
+import collins.models.AssetLifecycle
+import collins.models.MetaWrapper
+import collins.models.{Status => AStatus}
+import collins.softlayer.SoftLayerConfig
+import collins.util.concurrent.BackgroundProcess
+import collins.util.plugins.SoftLayer
 
 case class AssetCancelProcessor(tag: String, userTimeout: Option[FiniteDuration] = None)(implicit req: Request[AnyContent])
   extends BackgroundProcess[Either[ResponseData,Long]]

@@ -1,18 +1,17 @@
 package collins.controllers.actions.ipaddress
 
-import collins.controllers.SecureController
-import collins.controllers.ResponseData
-
-import collins.controllers.actions.SecureAction
-import collins.controllers.actions.RequestDataHolder
-
-import collins.models.IpAddresses
-import collins.models.Truthy
-import collins.models.shared.AddressPool
 import play.api.libs.json.JsArray
 import play.api.libs.json.JsNumber
 import play.api.libs.json.JsObject
 import play.api.libs.json.JsString
+
+import collins.controllers.ResponseData
+import collins.controllers.SecureController
+import collins.controllers.actions.RequestDataHolder
+import collins.controllers.actions.SecureAction
+import collins.models.IpAddresses
+import collins.models.Truthy
+import collins.models.shared.AddressPool
 import collins.util.security.SecuritySpecification
 
 // Get pools, all or just those in use

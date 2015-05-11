@@ -1,7 +1,11 @@
 package collins.util.config
 
-import collins.models.{Asset, User}
-import play.api.{Logger, Mode, Play}
+import play.api.Logger
+import play.api.Mode
+import play.api.Play
+import play.api.Play.current
+
+import collins.models.Asset
 
 object AppConfig {
   var globalConfig: Option[PlayConfiguration] = None 

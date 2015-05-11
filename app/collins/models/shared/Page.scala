@@ -1,6 +1,8 @@
 package collins.models.shared
 
-import play.api.libs.json.{JsValue, JsObject, JsNumber}
+import play.api.libs.json.JsValue
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsNumber
 
 sealed trait SortDirection {
   import SortDirection._

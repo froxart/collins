@@ -1,9 +1,9 @@
 package collins.models.shared
 
-import collins.models.MetaWrapper
 import collins.models.Asset
 import collins.models.AssetMeta
 import collins.models.AssetMetaValue
+import collins.models.MetaWrapper
 
 trait CommonHelper[T] {
   type Reconstruction = Tuple2[T, Seq[MetaWrapper]]

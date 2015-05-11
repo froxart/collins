@@ -1,7 +1,10 @@
 package collins.controllers
 
 import collins.models.User
-import collins.util.security.{SecuritySpec, SecuritySpecification, AuthenticationProviderConfig, AuthenticationProvider}
+import collins.util.security.AuthenticationProvider
+import collins.util.security.AuthenticationProviderConfig
+import collins.util.security.SecuritySpec
+import collins.util.security.SecuritySpecification
 
 object Permissions {
   val LoggedIn = SecuritySpec.fromConfig("controllers.Api", SecuritySpec(true))

@@ -1,7 +1,9 @@
 package collins.controllers
 
-import actions.logs.{CreateAction, FindAction, GetAction, SolrFindAction}
-
+import collins.controllers.actions.logs.CreateAction
+import collins.controllers.actions.logs.FindAction
+import collins.controllers.actions.logs.GetAction
+import collins.controllers.actions.logs.SolrFindAction
 import collins.models.shared.PageParams
 
 trait AssetLogApi {

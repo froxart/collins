@@ -1,11 +1,12 @@
 package collins.util.config
 
-import play.api.Application
-
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicBoolean
-import java.io.File
-import scala.collection.JavaConverters._
+
+import scala.collection.JavaConverters.asScalaBufferConverter
+import scala.collection.JavaConverters.collectionAsScalaIterableConverter
+
+import play.api.Application
 
 object Registry {
 

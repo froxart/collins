@@ -1,18 +1,19 @@
 package collins.controllers.actions
 
+import java.util.concurrent.atomic.AtomicReference
+
+import play.api.libs.json.JsArray
+import play.api.libs.json.JsObject
+import play.api.mvc.Result
+
 import collins.controllers.Api
-import collins.controllers.actions.asset.AssetFinderDataHolder
-import collins.models.Asset
-import collins.models.shared.Page
-import collins.models.asset.{AssetView, RemoteAsset}
-import collins.util.config.Feature
 import collins.controllers.Permissions
 import collins.controllers.ResponseData
-
-import java.util.concurrent.atomic.AtomicReference
-import play.api.mvc.Result
-import play.api.libs.json.JsObject
-import play.api.libs.json.JsArray
+import collins.models.Asset
+import collins.models.asset.AssetView
+import collins.models.asset.RemoteAsset
+import collins.models.shared.Page
+import collins.util.config.Feature
 
 // Helpers for actions
 trait AssetAction {

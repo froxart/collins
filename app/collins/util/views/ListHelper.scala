@@ -1,10 +1,12 @@
 package collins.util.views
 
 import collins.models.Asset
-import collins.models.shared.Page
 import collins.models.asset.AssetView
+import collins.models.shared.Page
 import collins.util.plugins.SoftLayer
-import collins.util.power.{PowerComponent, PowerUnits}
+import collins.util.power.PowerComponent
+import collins.util.power.PowerUnits
+import collins.util.power.PowerUnits
 
 // Mostly used with views/asset/list, also for comprehensions
 object ListHelper {

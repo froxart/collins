@@ -1,27 +1,32 @@
 package collins.controllers.actions.asset
 
-import collins.controllers.actions.SecureAction
+import play.api.Logger
+import play.api.data.Form
+import play.api.data.Forms.of
+import play.api.data.Forms.optional
+import play.api.data.Forms.tuple
+import play.api.mvc.AnyContent
+import play.api.mvc.Request
+import play.api.mvc.Result
+
+import collins.controllers.SecureController
 import collins.controllers.actions.AssetAction
 import collins.controllers.actions.AssetResultsAction
 import collins.controllers.actions.RequestDataHolder
-import collins.controllers.SecureController
-import collins.controllers.forms._
-
-import collins.models.{Asset, AssetFinder, AssetType, Status => AssetStatus, Truthy}
-import collins.models.shared.{Page, PageParams}
-import collins.models.asset.AssetView
+import collins.controllers.actions.SecureAction
+import collins.controllers.forms.sortTypeformat
+import collins.controllers.forms.truthyFormat
+import collins.models.Asset
+import collins.models.AssetFinder
 import collins.models.AssetSort
-
-import play.api.mvc.Result
-import play.api.data.Form
-import play.api.data.Forms.{of, tuple, optional}
-import play.api.Logger
-import play.api.mvc.{AnyContent, Request, Result}
-
+import collins.models.AssetType
+import collins.models.{Status => AssetStatus}
+import collins.models.Truthy
+import collins.models.asset.AssetView
+import collins.models.shared.Page
+import collins.models.shared.PageParams
 import collins.util.MessageHelper
 import collins.util.security.SecuritySpecification
-
-import views.html
 
 case class FindSimilarAction(
   assetTag: String,

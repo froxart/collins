@@ -1,11 +1,8 @@
 package collins.controllers.actions.asset
 
-import collins.power.Identify
-import collins.power.PowerAction
-import collins.power.PowerState
-import collins.power.Verify
-import collins.power.management.PowerManagementConfig
-import collins.shell.CommandResult
+import play.api.mvc.AsyncResult
+import play.api.mvc.Result
+import play.api.mvc.Results
 
 import collins.controllers.Api
 import collins.controllers.ResponseData
@@ -14,9 +11,12 @@ import collins.controllers.actions.AssetAction
 import collins.controllers.actions.RequestDataHolder
 import collins.controllers.actions.SecureAction
 import collins.models.Asset
-import play.api.mvc.AsyncResult
-import play.api.mvc.Result
-import play.api.mvc.Results
+import collins.power.Identify
+import collins.power.PowerAction
+import collins.power.PowerState
+import collins.power.Verify
+import collins.power.management.PowerManagementConfig
+import collins.shell.CommandResult
 import collins.util.IpmiCommand
 import collins.util.UserTattler
 import collins.util.concurrent.BackgroundProcessor

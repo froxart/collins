@@ -1,29 +1,30 @@
 package collins.controllers.actions.logs
 
-import collins.models.{Asset, AssetLog}
-import collins.models.logs.{LogMessageType, LogFormat, LogSource}
-import collins.util.{MessageHelper, TattlerHelper}
-import collins.util.config.Feature
-import collins.util.security.SecuritySpecification
-
-import collins.controllers.SecureController
-import collins.controllers.Api
-import collins.controllers.ResponseData
-import collins.controllers.validators.ParamValidation
-
-import collins.controllers.actions.SecureAction
-import collins.controllers.actions.AssetAction
-import collins.controllers.actions.RequestDataHolder
-
-import play.api.data.Form
-import play.api.data.Forms.tuple
-import play.api.libs.json.{JsUndefined, JsValue, JsBoolean}
-import play.api.mvc.Results
-
 import org.jsoup.Jsoup
 import org.jsoup.safety.Whitelist
 
-import scala.util.control.Exception.allCatch
+import play.api.data.Form
+import play.api.data.Forms.tuple
+import play.api.libs.json.JsBoolean
+import play.api.libs.json.JsUndefined
+import play.api.libs.json.JsValue
+
+import collins.controllers.Api
+import collins.controllers.ResponseData
+import collins.controllers.SecureController
+import collins.controllers.actions.AssetAction
+import collins.controllers.actions.RequestDataHolder
+import collins.controllers.actions.SecureAction
+import collins.controllers.validators.ParamValidation
+import collins.models.Asset
+import collins.models.AssetLog
+import collins.models.logs.LogFormat
+import collins.models.logs.LogMessageType
+import collins.models.logs.LogSource
+import collins.util.MessageHelper
+import collins.util.TattlerHelper
+import collins.util.config.Feature
+import collins.util.security.SecuritySpecification
 
 object CreateAction {
   val DefaultMessageType = Feature.defaultLogType

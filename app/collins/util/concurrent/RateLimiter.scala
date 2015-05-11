@@ -1,8 +1,9 @@
 package collins.util.concurrent
 
-import scala.concurrent.duration.Duration
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.locks.ReentrantLock
+
+import scala.concurrent.duration.Duration
 
 trait RateLimit {
   def rate: Int

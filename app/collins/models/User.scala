@@ -1,7 +1,8 @@
 package collins.models
 
-import collins.controllers.Permissions
 import play.api.Play
+
+import collins.controllers.Permissions
 import collins.util.Stats
 import collins.util.security.AuthenticationAccessor
 import collins.util.security.AuthenticationProvider

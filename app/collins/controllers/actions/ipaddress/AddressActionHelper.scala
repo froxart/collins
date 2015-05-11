@@ -1,12 +1,14 @@
 package collins.controllers.actions.ipaddress
 
-import collins.controllers.actions.SecureAction
-import collins.controllers.actions.RequestDataHolder
+import play.api.libs.json.JsObject
+import play.api.libs.json.Json
 
+import collins.controllers.actions.RequestDataHolder
+import collins.controllers.actions.SecureAction
 import collins.models.IpAddresses
+import collins.models.conversions.IpAddressFormat
 import collins.models.shared.IpAddressConfig
 import collins.util.IpAddress
-import play.api.libs.json.{Json, JsObject}
 
 trait AddressActionHelper { self: SecureAction =>
   class AddressDecorator(addresses: Seq[IpAddresses]) {

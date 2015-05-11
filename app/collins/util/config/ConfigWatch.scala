@@ -1,10 +1,13 @@
 package collins.util.config
 
-import play.api.Logger
-import com.typesafe.config.{ConfigException, ConfigFactory, ConfigObject}
-import scala.collection.JavaConverters._
 import java.io.File
 import java.util.Timer
+
+import scala.collection.JavaConverters.mapAsScalaMapConverter
+
+import play.api.Logger
+
+import com.typesafe.config.ConfigFactory
 
 object ConfigWatch extends AppConfig {
 

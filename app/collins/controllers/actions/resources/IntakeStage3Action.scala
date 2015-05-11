@@ -1,22 +1,22 @@
 package collins.controllers.actions.resources
 
-import collins.controllers.actions.asset.ActionAttributeHelper
-import collins.models.AssetLifecycle
-import collins.models.AssetMeta.Enum.{ChassisTag, RackPosition}
-import collins.intake.IntakeConfig
-import collins.util.MessageHelperI
-import collins.util.security.SecuritySpecification
-import collins.util.power.{InvalidPowerConfigurationException, PowerUnits}
-import collins.controllers.validators.ParamValidation
-import collins.controllers.SecureController
-import collins.controllers.actions.SecureAction
-import collins.controllers.actions.RequestDataHolder
+import java.util.concurrent.atomic.AtomicReference
 
-import play.api.data.{Form, FormError}
+import play.api.data.Form
+import play.api.data.FormError
 import play.api.data.Forms.tuple
 
-import java.util.concurrent.atomic.AtomicReference
-import scala.util.control.Exception.allCatch
+import collins.controllers.SecureController
+import collins.controllers.actions.RequestDataHolder
+import collins.controllers.actions.SecureAction
+import collins.controllers.actions.asset.ActionAttributeHelper
+import collins.controllers.validators.ParamValidation
+import collins.intake.IntakeConfig
+import collins.models.AssetLifecycle
+import collins.models.AssetMeta.Enum.ChassisTag
+import collins.models.AssetMeta.Enum.RackPosition
+import collins.util.power.PowerUnits
+import collins.util.security.SecuritySpecification
 
 trait IntakeStage3Form extends ParamValidation {
 

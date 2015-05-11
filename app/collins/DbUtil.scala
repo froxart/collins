@@ -1,7 +1,8 @@
 package collins
 
-import play.api.db.evolutions.OfflineEvolutions
 import java.io.File
+
+import play.api.db.evolutions.OfflineEvolutions
 
 object DbUtil extends App {
   Console.println("Running evolutions...")

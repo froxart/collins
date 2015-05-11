@@ -1,6 +1,5 @@
 package collins.models.asset
 
-import collins.models.{Asset, Status}
 import play.api.libs.json.JsObject
 import play.api.libs.json.JsString
 

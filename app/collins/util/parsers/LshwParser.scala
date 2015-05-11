@@ -1,6 +1,12 @@
 package collins.util.parsers
 
-import collins.models.lshw._
+import collins.models.lshw.LshwAsset
+import collins.models.lshw.Cpu
+import collins.models.lshw.Memory
+import collins.models.lshw.Disk
+import collins.models.lshw.Nic
+import collins.models.lshw.ServerBase
+
 import collins.util.config.LshwConfig
 import collins.util.LshwRepresentation
 import collins.util.ByteStorageUnit

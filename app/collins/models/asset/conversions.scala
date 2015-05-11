@@ -1,9 +1,21 @@
 package collins.models.asset
 
-import collins.models.{Asset, AssetType, State, Status}
-import collins.models.conversions._
-import play.api.libs.json.{Format, JsSuccess, JsObject, Json, JsValue, JsNumber, JsString}
 import java.sql.Timestamp
+
+import play.api.libs.json.Format
+import play.api.libs.json.JsNumber
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsString
+import play.api.libs.json.JsSuccess
+import play.api.libs.json.JsValue
+import play.api.libs.json.Json
+
+import collins.models.Asset
+import collins.models.AssetType
+import collins.models.State
+import collins.models.State.StateFormat
+import collins.models.Status
+import collins.models.conversions.TimestampFormat
 
 object conversions {
   import collins.models.State.StateFormat

@@ -1,7 +1,7 @@
 package collins.power.management
 
-import collins.power._
 import scala.concurrent.Future
+
 import collins.models.Asset
 
 trait PowerManagement {

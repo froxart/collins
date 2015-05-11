@@ -18,6 +18,7 @@ import collins.util.BashOutput
 import collins.util.HtmlOutput
 import collins.util.JsonOutput
 import collins.util.OutputType
+import collins.util.OutputType.contentTypeWithCharset
 import collins.util.TextOutput
 
 object ApiResponse extends ApiResponse {

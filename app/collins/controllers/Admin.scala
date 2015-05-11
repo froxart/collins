@@ -1,12 +1,10 @@
 package collins.controllers
 
+import collins.solr.Solr
 import collins.util.Stats
 import collins.util.plugins.Cache
-import collins.solr.Solr
-import collins.util.security.AuthenticationProviderConfig
-import views._
 
-import play.api.Play
+import views.html
 
 object Admin extends SecureWebController {
 

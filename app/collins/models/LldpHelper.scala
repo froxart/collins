@@ -1,8 +1,15 @@
 package collins.models
 
-import lldp._
-import collins.util.LldpRepresentation
+import collins.models.lldp.Chassis
+import collins.models.lldp.ChassisId
+import collins.models.lldp.Interface
+import collins.models.lldp.Port
+import collins.models.lldp.PortId
+import collins.models.lldp.Vlan
 import collins.models.shared.CommonHelper
+import collins.util.LldpRepresentation
+
+import collins.models.AssetMeta.Enum._
 
 object LldpHelper extends CommonHelper[LldpRepresentation] {
   import AssetMeta.Enum._

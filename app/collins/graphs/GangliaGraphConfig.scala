@@ -1,6 +1,7 @@
 package collins.graphs
 
-import collins.util.config.{Configurable, ConfigValue}
+import collins.util.config.ConfigValue
+import collins.util.config.Configurable
 
 // todo: support by role custom metrics/graphs
 object GangliaGraphConfig extends Configurable {

@@ -1,6 +1,7 @@
 package collins.graphs
 
-import collins.util.config.{Configurable, ConfigValue}
+import collins.util.config.ConfigValue
+import collins.util.config.Configurable
 
 object FibrGraphConfig extends Configurable {
 

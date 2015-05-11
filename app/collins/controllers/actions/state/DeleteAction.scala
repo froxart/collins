@@ -1,19 +1,18 @@
 package collins.controllers.actions.state
 
-import collins.controllers.SecureController
-import collins.controllers.ResponseData
-import collins.controllers.Api
-import collins.validation.StringUtil
-
-import collins.controllers.actions.SecureAction
-import collins.controllers.actions.RequestDataHolder
-
-import collins.models.Asset
-import collins.models.State
 import play.api.libs.json.JsNumber
 import play.api.libs.json.JsObject
+
+import collins.controllers.Api
+import collins.controllers.ResponseData
+import collins.controllers.SecureController
+import collins.controllers.actions.RequestDataHolder
+import collins.controllers.actions.SecureAction
+import collins.models.Asset
+import collins.models.State
 import collins.util.MessageHelper
 import collins.util.security.SecuritySpecification
+import collins.validation.StringUtil
 
 object DeleteAction {
   object Messages extends MessageHelper("controllers.AssetStateApi.deleteState") {

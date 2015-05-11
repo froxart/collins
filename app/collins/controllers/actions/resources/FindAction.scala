@@ -1,16 +1,16 @@
 package collins.controllers.actions.resources
 
-import collins.controllers.actions.RequestDataHolder
-import collins.controllers.actions.ActionHelper
-import collins.controllers.actions.asset.{AssetFinderDataHolder, FindAction => AssetFindAction}
+import play.api.mvc.Result
 
 import collins.controllers.SecureController
-import collins.models.Asset
-import collins.models.shared.{Page, PageParams}
+import collins.controllers.actions.ActionHelper
+import collins.controllers.actions.RequestDataHolder
+import collins.controllers.actions.asset.AssetFinderDataHolder
+import collins.controllers.actions.asset.{FindAction => AssetFindAction}
 import collins.models.asset.AssetView
+import collins.models.shared.Page
+import collins.models.shared.PageParams
 import collins.util.security.SecuritySpecification
-
-import play.api.mvc.Result
 
 case class FindAction(
   pageParams: PageParams,

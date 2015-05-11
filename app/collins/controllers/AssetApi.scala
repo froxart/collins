@@ -1,7 +1,16 @@
 package collins.controllers
 
-import collins.controllers.actions.asset._
+import collins.controllers.actions.asset.CreateAction
+import collins.controllers.actions.asset.DeleteAction
+import collins.controllers.actions.asset.DeleteAttributeAction
+import collins.controllers.actions.asset.FindAction
+import collins.controllers.actions.asset.FindSimilarAction
+import collins.controllers.actions.asset.GetAction
+import collins.controllers.actions.asset.UpdateAction
+import collins.controllers.actions.asset.UpdateForMaintenanceAction
+import collins.controllers.actions.asset.UpdateRequestRouter
 import collins.controllers.actions.asset.UpdateRequestRouter.Matcher.StatusOnly
+import collins.controllers.actions.asset.UpdateStatusAction
 import collins.models.shared.PageParams
 
 trait AssetApi {

@@ -1,4 +1,5 @@
 package collins.util
+
 import com.twitter.util.StorageUnit
 
 object ByteStorageUnit {

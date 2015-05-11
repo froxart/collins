@@ -1,19 +1,19 @@
 package collins.controllers.actions.asset
 
-import collins.controllers.SecureController
+import play.api.data.Form
+import play.api.data.Forms.optional
+import play.api.data.Forms.text
+
 import collins.controllers.Api
-import collins.controllers.actions.SecureAction
+import collins.controllers.SecureController
 import collins.controllers.actions.AssetAction
 import collins.controllers.actions.RequestDataHolder
-
-import collins.validation.StringUtil
+import collins.controllers.actions.SecureAction
 import collins.models.AssetLifecycle
 import collins.models.asset.AssetDeleter
 import collins.util.SystemTattler
 import collins.util.security.SecuritySpecification
-
-import play.api.data.Form
-import play.api.data.Forms.{optional, text}
+import collins.validation.StringUtil
 
 case class DeleteAction(
   _assetTag: String,

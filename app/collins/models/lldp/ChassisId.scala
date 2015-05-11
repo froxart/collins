@@ -1,6 +1,10 @@
 package collins.models.lldp
 
-import play.api.libs.json.{Format, JsValue, JsSuccess, JsObject, Json}
+import play.api.libs.json.Format
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsSuccess
+import play.api.libs.json.JsValue
+import play.api.libs.json.Json
 
 object ChassisId {
   implicit object ChassisIdFormat extends Format[ChassisId] {

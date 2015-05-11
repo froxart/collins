@@ -1,9 +1,13 @@
 package collins.util.power
 
-import PowerConfiguration.Messages.{ValidationMissingRequired, ValidationNonUnique}
-import collins.models.{Asset, AssetMetaValue}
-import collection.immutable.SortedSet
-import collection.mutable.HashSet
+import scala.collection.immutable.SortedSet
+import scala.collection.mutable.HashSet
+
+import collins.models.Asset
+import collins.models.AssetMetaValue
+
+import collins.util.power.PowerConfiguration.Messages.ValidationMissingRequired
+import collins.util.power.PowerConfiguration.Messages.ValidationNonUnique
 
 object PowerUnits extends Iterable[PowerUnit] {
   def apply(): PowerUnits = apply(None)

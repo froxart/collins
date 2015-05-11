@@ -1,17 +1,20 @@
 package collins.util.concurrent
 
-import akka.util.Timeout.durationToTimeout
-import akka.actor._
-import akka.pattern.ask
-import akka.routing.RoundRobinRouter
+import java.util.concurrent.TimeoutException
+
 import scala.concurrent.Future
 import scala.concurrent.duration.Duration
-import play.api.libs.concurrent.Akka
-import java.util.concurrent.TimeoutException
-import play.api.libs.concurrent.Execution.Implicits._
-import akka.actor.Props
-import akka.routing.FromConfig
 
+import play.api.Play.current
+import play.api.libs.concurrent.Akka
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
+
+import akka.actor.Actor
+import akka.actor.Props
+import akka.actor.actorRef2Scala
+import akka.pattern.ask
+import akka.routing.FromConfig
+import akka.util.Timeout.durationToTimeout
 
 class BackgroundProcessorActor extends Actor {
   def receive = {

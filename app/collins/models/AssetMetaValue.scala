@@ -1,18 +1,23 @@
 package collins.models
 
-import asset.AssetView
-import conversions._
-import collins.util.{CryptoCodec, InternalTattler}
-import collins.util.config.Feature
-import play.api.Logger
-import java.sql.Timestamp
-import java.util.Date
-
 import org.squeryl.PrimitiveTypeMode._
-import org.squeryl.{Query, Schema}
-import org.squeryl.dsl.ast.{BinaryOperatorNodeLogicalBoolean, ExistsExpression, ExpressionNode, LogicalBoolean}
+import org.squeryl.Schema
+import org.squeryl.dsl.ast.BinaryOperatorNodeLogicalBoolean
+import org.squeryl.dsl.ast.LogicalBoolean
 
-import collins.models.shared.{BasicModel, Page, PageParams}
+import play.api.Logger
+
+import collins.models.shared.BasicModel
+import collins.models.shared.Page
+import collins.models.shared.PageParams
+
+import collins.util.InternalTattler
+import collins.util.CryptoCodec
+import collins.util.config.Feature
+
+import collins.models.asset.AssetView
+import collins.models.conversions.ops2bo
+import collins.models.conversions.reOrLike
 
 case class AssetMetaValue(asset_id: Long, asset_meta_id: Long, group_id: Int, value: String) {
 

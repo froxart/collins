@@ -1,13 +1,12 @@
 package collins.util
 
-import play.api.mvc.Headers
 import play.api.mvc.Action
-import play.api.mvc.Results
 import play.api.mvc.AnyContent
+import play.api.mvc.Headers
+import play.api.mvc.Results
 
 import collins.controllers.ApiResponse
 import collins.controllers.actions.SecureAction
-
 
 /**
  * We're using an algebraic data type and partial functions for the routing map to ensure
@@ -16,7 +15,6 @@ import collins.controllers.actions.SecureAction
  *
  * with this implementation, the compiler can check for both of these
  */
-
 sealed trait ApiVersion {
   def stringName: String
 }
@@ -34,7 +32,6 @@ object ApiVersion {
 
   def safeWithName(name: String): Option[ApiVersion] = versions.find(_.stringName == name)
 }
-import ApiVersion._
 
 class VersionException(message: String) extends Exception(message)
 

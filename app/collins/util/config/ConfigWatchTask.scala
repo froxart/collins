@@ -1,10 +1,13 @@
 package collins.util.config
 
-import play.api.Logger
-import scala.collection.JavaConverters._
 import java.io.File
 import java.util.TimerTask
 import java.util.concurrent.ConcurrentHashMap
+
+import scala.collection.JavaConverters.asScalaSetConverter
+import scala.collection.JavaConverters.mapAsJavaMapConverter
+
+import play.api.Logger
 
 class ConfigWatchTask(watchedFiles: Map[File,Long]) extends TimerTask {
   private val logger = Logger("ConfigWatchTask")

@@ -1,19 +1,26 @@
 package collins.util
 
-import java.security._
-import javax.crypto._
-import javax.crypto.spec._
+import java.security.SecureRandom
+import java.security.Security
+
 import scala.util.Random
+
 import org.bouncycastle.crypto.PBEParametersGenerator
 import org.bouncycastle.crypto.digests.SHA256Digest
 import org.bouncycastle.crypto.engines.AESEngine
 import org.bouncycastle.crypto.generators.PKCS12ParametersGenerator
 import org.bouncycastle.crypto.modes.CBCBlockCipher
-import org.bouncycastle.crypto.paddings.{PaddedBufferedBlockCipher, PKCS7Padding}
+import org.bouncycastle.crypto.paddings.PKCS7Padding
+import org.bouncycastle.crypto.paddings.PaddedBufferedBlockCipher
 import org.bouncycastle.crypto.params.ParametersWithIV
 import org.bouncycastle.jce.provider.BouncyCastleProvider
 
 import play.api.Play
+
+import javax.crypto.Cipher
+import javax.crypto.SecretKeyFactory
+import javax.crypto.spec.PBEKeySpec
+import javax.crypto.spec.PBEParameterSpec
 
 trait CryptoAccessor {
   def getCryptoKey(): String

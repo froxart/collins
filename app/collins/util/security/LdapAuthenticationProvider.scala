@@ -1,12 +1,18 @@
 package collins.util.security
 
-import collins.models.{User, UserImpl}
-
-import scala.collection.JavaConversions._
-import scala.collection.JavaConverters._
 import java.util.{Hashtable => JHashTable}
-import javax.naming._
-import javax.naming.directory._
+
+import scala.collection.JavaConversions.enumerationAsScalaIterator
+import scala.collection.JavaConversions.mapAsJavaMap
+import scala.collection.JavaConverters.mapAsJavaMapConverter
+
+import collins.models.User
+import collins.models.UserImpl
+
+import javax.naming.Context
+import javax.naming.directory.InitialDirContext
+import javax.naming.directory.SearchControls
+import javax.naming.directory.SearchResult
 
 class LdapAuthenticationProvider extends AuthenticationProvider {
 

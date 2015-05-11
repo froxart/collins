@@ -1,14 +1,16 @@
 package collins.models.shared
 
-import collins.util.plugins.Callback
-import collins.util.plugins.Cache
+import org.squeryl.KeyedEntity
+import org.squeryl.PrimitiveTypeMode
+import org.squeryl.Query
+import org.squeryl.Schema
+import org.squeryl.Table
+import org.squeryl.internals.PosoLifecycleEvent
 
 import play.api.Logger
-import org.squeryl.{KeyedEntity, Query, Schema, Table}
-import org.squeryl.dsl.QueryDsl
-import org.squeryl.dsl.ast.LogicalBoolean
-import org.squeryl.internals.PosoLifecycleEvent
-import scala.transient
+
+import collins.util.plugins.Cache
+import collins.util.plugins.Callback
 
 trait ValidatedEntity[T] extends KeyedEntity[T] {
   def validate(): Unit

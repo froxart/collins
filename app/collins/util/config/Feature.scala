@@ -1,9 +1,10 @@
 package collins.util.config
 
-import collins.util.MessageHelper
-
-import collins.models.{Asset, AssetMeta, Status}
+import collins.models.Asset
+import collins.models.AssetMeta
+import collins.models.Status
 import collins.models.logs.LogMessageType
+import collins.util.MessageHelper
 
 /**
  * Describes general features for collins, not tied to particular pieces of functionality

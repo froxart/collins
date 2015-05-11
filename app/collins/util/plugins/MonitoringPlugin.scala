@@ -1,5 +1,5 @@
 package collins.util.plugins
-import play.api.Application
+
 import play.api.Play
 
 object MonitoringPlugin {

@@ -1,6 +1,9 @@
 package collins.util.views
 
-import collins.util.config.{Configurable, ConfigAccessor, ConfigSource, TypesafeConfiguration}
+import collins.util.config.ConfigAccessor
+import collins.util.config.ConfigSource
+import collins.util.config.Configurable
+import collins.util.config.TypesafeConfiguration
 
 case class DecoratorConfig(val name: String, override val source: TypesafeConfiguration)
   extends ConfigAccessor with ConfigSource

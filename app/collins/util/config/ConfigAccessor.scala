@@ -1,10 +1,18 @@
 package collins.util.config
 
-import play.api.{Logger, PlayException}
-import com.typesafe.config.{ConfigException, ConfigFactory, ConfigObject, ConfigValue => TypesafeConfigValue}
-import scala.collection.JavaConverters._
-import java.net.{MalformedURLException, URL}
+import java.net.MalformedURLException
+import java.net.URL
 import java.util.concurrent.atomic.AtomicReference
+
+import scala.collection.JavaConverters.asScalaBufferConverter
+import scala.collection.JavaConverters.mapAsScalaMapConverter
+
+import play.api.PlayException
+
+import com.typesafe.config.ConfigException
+import com.typesafe.config.ConfigFactory
+import com.typesafe.config.ConfigObject
+import com.typesafe.config.{ConfigValue => TypesafeConfigValue}
 
 class ConfigurationException(msg: String) extends Exception(msg)
 

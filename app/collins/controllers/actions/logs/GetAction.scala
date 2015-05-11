@@ -1,14 +1,13 @@
 package collins.controllers.actions.logs
 
-import collins.controllers.SecureController
+import play.api.libs.json.JsBoolean
+
 import collins.controllers.Api
 import collins.controllers.ResponseData
-
-import collins.controllers.actions.SecureAction
+import collins.controllers.SecureController
 import collins.controllers.actions.RequestDataHolder
-
+import collins.controllers.actions.SecureAction
 import collins.models.AssetLog
-import play.api.libs.json.JsBoolean
 import collins.util.security.SecuritySpecification
 
 case class GetAction(

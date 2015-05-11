@@ -1,15 +1,12 @@
 package collins.controllers
 
-import collins.models.Asset
-import collins.models.Truthy
-import collins.util.Stats
-import collins.util.plugins.Cache
-import collins.solr.Solr
-import collins.util.security.AuthenticationProviderConfig
-import play.api.Play
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
 import play.api.libs.json.JsString
 import play.api.mvc.Results
-import play.api.libs.concurrent.Execution.Implicits._
+
+import collins.models.Asset
+import collins.models.Truthy
+import collins.solr.Solr
 
 trait AdminApi {
   this: Api with SecureController =>

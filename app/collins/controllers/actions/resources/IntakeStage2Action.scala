@@ -1,13 +1,14 @@
 package collins.controllers.actions.resources
 
-import collins.models.AssetMeta.Enum.ChassisTag
 import play.api.data.Form
 import play.api.data.Forms.single
-import collins.util.security.SecuritySpecification
-import collins.controllers.validators.ParamValidation
+
 import collins.controllers.SecureController
-import collins.controllers.actions.SecureAction
 import collins.controllers.actions.RequestDataHolder
+import collins.controllers.actions.SecureAction
+import collins.controllers.validators.ParamValidation
+import collins.models.AssetMeta.Enum.ChassisTag
+import collins.util.security.SecuritySpecification
 
 trait IntakeStage2Form extends ParamValidation {
   val dataForm = Form(single(

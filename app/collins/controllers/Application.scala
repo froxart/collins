@@ -1,9 +1,10 @@
 package collins.controllers
 
-import collins.models.User
 import play.api.data.Form
 import play.api.data.Forms
 import play.api.mvc.Action
+
+import collins.models.User
 import collins.util.security.SecuritySpec
 
 import views.html

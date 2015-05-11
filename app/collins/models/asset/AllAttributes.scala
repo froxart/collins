@@ -1,11 +1,26 @@
 package collins.models.asset
 
-import collins.models._
-import collins.util.{LldpRepresentation, LshwRepresentation}
-import collins.util.config.{Feature, MultiCollinsConfig, NodeclassifierConfig}
-import collins.util.power.PowerUnits
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsString
+import play.api.libs.json.JsValue
+import play.api.libs.json.Json
 
-import play.api.libs.json.{Json, JsValue, JsObject, JsString}
+import collins.models.Asset
+import collins.models.AssetMetaValue
+import collins.models.IpAddresses
+import collins.models.IpmiInfo
+import collins.models.LldpHelper
+import collins.models.LshwHelper
+import collins.models.MetaWrapper
+import collins.models.PowerHelper
+import collins.models.conversions.IpAddressFormat
+import collins.models.conversions.IpmiFormat
+import collins.util.LldpRepresentation
+import collins.util.LshwRepresentation
+import collins.util.config.Feature
+import collins.util.power.PowerUnit.PowerUnitFormat
+import collins.util.power.PowerUnits
+import collins.util.power.PowerUnits
 
 object AllAttributes {
   def get(asset: Asset): AllAttributes = {

@@ -1,11 +1,11 @@
 package collins.controllers.actions.asset
 
-import collins.controllers.actions.SecureAction
-
 import scala.collection.immutable.DefaultMap
 
 import play.api.mvc.AnyContent
 import play.api.mvc.Request
+
+import collins.controllers.actions.SecureAction
 
 case class AttributeMap(underlying: Map[String,String]) extends DefaultMap[String,String] {
   override def get(key: String): Option[String] = underlying.get(key)

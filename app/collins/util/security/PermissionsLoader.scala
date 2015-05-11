@@ -1,11 +1,14 @@
 package collins.util.security
 
-import collins.permissions.{PermissionsHelper, Privileges}
-import collins.validation.File
+import java.io.{File => IoFile}
 
 import play.api.Logger
+
 import com.google.common.cache.CacheLoader
-import java.io.{File => IoFile}
+
+import collins.permissions.PermissionsHelper
+import collins.permissions.Privileges
+import collins.validation.File
 
 case class PermissionsLoader(privileges: Privileges) extends CacheLoader[String, Privileges] {
 

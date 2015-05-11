@@ -1,12 +1,17 @@
 package collins.util
 
-import config.Feature
+import collins.util.config.Feature
 
-import collins.models.{Asset, AssetMeta, AssetMetaValue, IpAddresses, IpmiInfo, State, Status}
-import collins.models.conversions._
+import collins.models.Asset
+import collins.models.AssetMeta
+import collins.models.AssetMetaValue
+import collins.models.IpAddresses
+import collins.models.IpmiInfo
+import collins.models.State
+import collins.models.Status
+import collins.models.conversions.dateToTimestamp
 
 import java.util.Date
-import java.sql._
 
 case class AssetStateMachine(asset: Asset) {
 

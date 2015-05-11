@@ -1,9 +1,9 @@
 package collins.util
 
-import org.apache.commons.net.util.SubnetUtils
-
 import java.net.InetAddress
 import java.nio.ByteBuffer
+
+import org.apache.commons.net.util.SubnetUtils
 
 /**
  * Convert IpAddresses from dotted quad to long and long to dotted quad

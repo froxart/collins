@@ -1,10 +1,9 @@
 package collins.util.views
 
-import collins.models.Asset
-import collins.models.Status
-
 import play.api.mvc.Content
 import play.api.templates.Html
+
+import collins.models.Asset
 
 trait Summarizer[T] {
   type Token = String

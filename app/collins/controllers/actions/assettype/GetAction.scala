@@ -1,16 +1,15 @@
 package collins.controllers.actions.assettype
 
-import collins.controllers.SecureController
+import play.api.libs.json.Json
+
 import collins.controllers.ResponseData
-
-import collins.controllers.actions.SecureAction
+import collins.controllers.SecureController
 import collins.controllers.actions.RequestDataHolder
-
-import collins.validation.StringUtil
+import collins.controllers.actions.SecureAction
 import collins.models.AssetType
 import collins.util.MessageHelper
 import collins.util.security.SecuritySpecification
-import play.api.libs.json.Json
+import collins.validation.StringUtil
 
 object GetAction {
   object Messages extends MessageHelper("controllers.AssetTypeApi.getAssetType") {

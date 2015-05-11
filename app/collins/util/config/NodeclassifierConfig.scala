@@ -1,7 +1,7 @@
 package collins.util.config
 
-import collins.models.AssetType
 import collins.models.AssetSort
+import collins.models.AssetType
 
 object NodeclassifierConfig extends Configurable {
   override val namespace = "nodeclassifier"

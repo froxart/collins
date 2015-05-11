@@ -1,13 +1,15 @@
 package collins.controllers.actors
 
+import java.util.concurrent.TimeUnit
+
+import scala.concurrent.duration.Duration
 import scala.concurrent.duration.FiniteDuration
+
+import collins.provisioning.ProvisionerConfig
 import collins.provisioning.ProvisionerRequest
 import collins.shell.CommandResult
 import collins.util.concurrent.BackgroundProcess
 import collins.util.plugins.Provisioner
-import scala.concurrent.duration.Duration
-import collins.provisioning.ProvisionerConfig
-import java.util.concurrent.TimeUnit
 
 sealed trait ProvisionerStatus
 sealed trait ProvisionerFailure extends ProvisionerStatus

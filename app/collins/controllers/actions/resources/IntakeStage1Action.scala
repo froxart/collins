@@ -1,25 +1,28 @@
 package collins.controllers.actions.resources
 
-import collins.controllers.SecureController
-import collins.controllers.Help
-import collins.controllers.actions.SecureAction
-import collins.controllers.actions.RequestDataHolder
+import scala.concurrent.Future
 
-import collins.controllers.forms._
-import collins.models.Truthy
+import play.api.data.Form
+import play.api.data.Forms.of
+import play.api.data.Forms.single
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
+import play.api.mvc.AsyncResult
+import play.api.mvc.SimpleResult
 import play.api.templates.Html
-import collins.util.IpmiCommand
-import collins.util.concurrent.BackgroundProcessor
-import collins.util.plugins.{IpmiPowerCommand, PowerManagement}
-import collins.util.security.SecuritySpecification
+
+import collins.controllers.Help
+import collins.controllers.SecureController
+import collins.controllers.actions.RequestDataHolder
+import collins.controllers.actions.SecureAction
+import collins.controllers.forms.truthyFormat
+import collins.models.Truthy
 import collins.power.Identify
 import collins.power.management.PowerManagement
-import play.api.data.Form
-import play.api.data.Forms.{single, of}
-import play.api.mvc.{SimpleResult, AsyncResult}
-import scala.concurrent.Future
-import play.api.libs.concurrent.Execution.Implicits._
-
+import collins.util.IpmiCommand
+import collins.util.concurrent.BackgroundProcessor
+import collins.util.plugins.IpmiPowerCommand
+import collins.util.plugins.PowerManagement
+import collins.util.security.SecuritySpecification
 
 case class IntakeStage1Action(
   assetId: Long,

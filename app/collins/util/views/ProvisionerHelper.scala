@@ -1,9 +1,16 @@
 package collins.util.views
 
-import collins.models.{AssetMeta, AssetMetaValue}
-import collins.util.plugins.Provisioner
-import play.api.libs.json.{JsValue, JsBoolean, JsString, JsObject, Json, JsArray}
+import play.api.libs.json.JsArray
+import play.api.libs.json.JsBoolean
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsString
+import play.api.libs.json.JsValue
+import play.api.libs.json.Json
 import play.api.templates.Html
+
+import collins.models.AssetMeta
+import collins.models.AssetMetaValue
+import collins.util.plugins.Provisioner
 
 object ProvisionerHelper {
   def profilesAsJson(): Html = {

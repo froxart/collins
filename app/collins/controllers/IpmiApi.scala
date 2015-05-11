@@ -1,14 +1,22 @@
 package collins.controllers
 
-import collins.models.{Asset, IpmiInfo}
-import collins.util.IpAddress
+import java.sql.SQLException
+
+import scala.Left
+import scala.Right
 
 import play.api.data.Form
-import play.api.data.Forms.{mapping, optional, text}
+import play.api.data.Forms.mapping
+import play.api.data.Forms.optional
+import play.api.data.Forms.text
 import play.api.http.{Status => StatusValues}
-import play.api.libs.json.{JsBoolean, JsObject}
+import play.api.libs.json.JsBoolean
+import play.api.libs.json.JsObject
 import play.api.mvc.Results
-import java.sql.SQLException
+
+import collins.models.Asset
+import collins.models.IpmiInfo
+import collins.util.IpAddress
 
 trait IpmiApi {
   this: Api with SecureController =>

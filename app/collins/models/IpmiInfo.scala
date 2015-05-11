@@ -1,15 +1,22 @@
 package collins.models
 
+import org.squeryl.PrimitiveTypeMode._
 import org.squeryl.dsl.ast.BinaryOperatorNodeLogicalBoolean
 import org.squeryl.dsl.ast.LogicalBoolean
 
-import asset.AssetView
 import play.api.libs.json.Json
-import shared.AddressPool
+
+import collins.models.asset.AssetView
+import collins.models.shared.AddressPool
+import collins.models.shared.IpAddressStorage
+import collins.models.shared.IpAddressable
+import collins.models.shared.Page
+import collins.models.shared.PageParams
 import collins.util.CryptoCodec
 import collins.util.IpAddress
 import collins.util.config.IpmiConfig
-import collins.models.shared.{IpAddressable, IpAddressStorage, Page, PageParams}
+
+import conversions.IpmiFormat
 
 case class IpmiInfo(
   asset_id: Long,

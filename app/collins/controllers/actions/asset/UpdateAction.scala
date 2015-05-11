@@ -3,23 +3,25 @@ package collins.controllers.actions.asset
 import scala.collection.immutable.DefaultMap
 import scala.collection.mutable.HashMap
 
-import UpdateAction.Messages.message
+import play.api.data.Form
+import play.api.data.Forms.longNumber
+import play.api.data.Forms.optional
+import play.api.data.Forms.tuple
+
 import collins.controllers.Api
 import collins.controllers.SecureController
 import collins.controllers.actions.AssetAction
 import collins.controllers.actions.RequestDataHolder
 import collins.controllers.actions.SecureAction
+import collins.controllers.validators.ParamValidation
 import collins.models.AssetLifecycle
 import collins.models.AssetMeta.Enum.ChassisTag
 import collins.models.AssetMeta.Enum.RackPosition
-import play.api.data.Form
-import play.api.data.Forms.longNumber
-import play.api.data.Forms.optional
-import play.api.data.Forms.tuple
 import collins.util.MessageHelper
 import collins.util.power.PowerUnits
 import collins.util.security.SecuritySpecification
-import collins.controllers.validators.ParamValidation
+
+import collins.controllers.actions.asset.UpdateAction.Messages.message
 
 object UpdateAction extends ParamValidation {
   object Messages extends MessageHelper("asset.update") {

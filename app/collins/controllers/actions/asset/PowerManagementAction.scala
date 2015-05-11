@@ -1,13 +1,13 @@
 package collins.controllers.actions.asset
 
-import collins.controllers.SecureController
-import collins.power.PowerAction
-import collins.controllers.forms._
-
-import collins.util.security.SecuritySpecification
-
 import play.api.data.Form
-import play.api.data.Forms.{single, of}
+import play.api.data.Forms.of
+import play.api.data.Forms.single
+
+import collins.controllers.SecureController
+import collins.controllers.forms.powerFormat
+import collins.power.PowerAction
+import collins.util.security.SecuritySpecification
 
 case class PowerManagementAction(
   assetTag: String,

@@ -1,27 +1,41 @@
 package collins.models
 
-import conversions._
 import java.sql.Timestamp
 import java.util.Date
 
-import org.squeryl.PrimitiveTypeMode._
+import org.squeryl.PrimitiveTypeMode.__thisDsl
+import org.squeryl.PrimitiveTypeMode.count
+import org.squeryl.PrimitiveTypeMode.enum2EnumNode
+import org.squeryl.PrimitiveTypeMode.from
+import org.squeryl.PrimitiveTypeMode.long2ScalarLong
+import org.squeryl.PrimitiveTypeMode.optionLong2ScalarLong
+import org.squeryl.PrimitiveTypeMode.orderByArg2OrderByExpression
+import org.squeryl.PrimitiveTypeMode.singleColComputeQuery2Scalar
+import org.squeryl.PrimitiveTypeMode.traversableOfEnumerationValue2ListEnumerationValue
+import org.squeryl.PrimitiveTypeMode.where
 import org.squeryl.Schema
 import org.squeryl.dsl.ast.LogicalBoolean
 
-import logs.LogFormat
-import logs.LogFormat.LogFormat
-import logs.LogMessageType
-import logs.LogMessageType.LogMessageType
-import logs.LogSource
-import logs.LogSource.LogSource
-import collins.models.conversions.dateToTimestamp
-import collins.models.conversions.orderByString2oba
 import play.api.libs.json.JsObject
 import play.api.libs.json.JsString
 import play.api.libs.json.Json
-import play.api.libs.json.Json.toJson
 
-import shared.{ValidatedEntity, AnormAdapter, Page}
+import collins.models.conversions.dateToTimestamp
+import collins.models.conversions.orderByString2oba
+import collins.models.shared.AnormAdapter
+import collins.models.shared.Page
+import collins.models.shared.ValidatedEntity
+
+import collins.models.conversions.AssetLogFormat
+import collins.models.logs.LogFormat
+import collins.models.logs.LogFormat.LogFormat
+import collins.models.logs.LogMessageType
+import collins.models.logs.LogMessageType.LogMessageType
+import collins.models.logs.LogSource
+import collins.models.logs.LogSource.LogSource
+import collins.models.shared.AnormAdapter
+import collins.models.shared.Page
+import collins.models.shared.ValidatedEntity
 
 case class AssetLog(
   asset_id: Long,

@@ -1,7 +1,8 @@
 package collins.util.plugins
 
+import play.api.Play
+
 import collins.graphs.{GraphPlugin => GraphPlayPlugin}
-import play.api.{Application, Mode, Play}
 
 object GraphPlugin {
   def option(): Option[GraphPlayPlugin] = {

@@ -2,7 +2,6 @@ package collins.util.security
 
 import collins.models.User
 
-
 /**
  * Exception encountered during authentication phase
  */

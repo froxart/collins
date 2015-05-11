@@ -1,19 +1,28 @@
 package collins.controllers.actions.asset
 
-import collins.controllers.forms._
-import collins.controllers.validators.ParamValidation
-import collins.controllers.SecureController
+import play.api.data.Form
+import play.api.data.Forms.of
+import play.api.data.Forms.optional
+import play.api.data.Forms.tuple
+
 import collins.controllers.Api
-
-import collins.controllers.actions.SecureAction
-import collins.controllers.actions.RequestDataHolder
+import collins.controllers.SecureController
 import collins.controllers.actions.AssetAction
-
-import collins.models.{Asset, AssetLifecycle, State, Status => AssetStatus}
+import collins.controllers.actions.RequestDataHolder
+import collins.controllers.actions.SecureAction
+import collins.controllers.forms.stateFormat
+import collins.controllers.forms.statusFormat
+import collins.controllers.validators.ParamValidation
+import collins.models.Asset
+import collins.models.AssetLifecycle
+import collins.models.State
+import collins.models.{Status => AssetStatus}
 import collins.util.security.SecuritySpecification
 
-import play.api.data.Form
-import play.api.data.Forms.{tuple, of, optional}
+import collins.controllers.actions.asset.UpdateAction.Messages.fuck
+import collins.controllers.actions.asset.UpdateAction.Messages.invalidState
+import collins.controllers.actions.asset.UpdateAction.Messages.invalidStatus
+import collins.controllers.actions.asset.UpdateAction.Messages.rootMessage
 
 object UpdateStatusAction extends ParamValidation {
   val UpdateForm = Form(tuple(

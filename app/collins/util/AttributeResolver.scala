@@ -1,6 +1,7 @@
 package collins.util
 
-import collins.models.{AssetMeta, IpmiInfo}
+import collins.models.AssetMeta
+import collins.models.IpmiInfo
 
 object AttributeResolver extends MessageHelper("attributeresolver") {
 

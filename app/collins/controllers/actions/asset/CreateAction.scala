@@ -1,22 +1,28 @@
 package collins.controllers.actions.asset
 
-import collins.controllers.SecureController
-import collins.controllers.ResponseData
+import play.api.data.Form
+import play.api.data.Forms.of
+import play.api.data.Forms.optional
+import play.api.data.Forms.text
+import play.api.data.Forms.tuple
+import play.api.mvc.Result
 
-import collins.controllers.actions.SecureAction
+import collins.controllers.ResponseData
+import collins.controllers.SecureController
 import collins.controllers.actions.AssetAction
 import collins.controllers.actions.RequestDataHolder
-
-import collins.controllers.forms._
-
-import collins.validation.StringUtil
-import collins.models.{Asset, AssetLifecycle, AssetType, IpmiInfo, Status => AssetStatus, Truthy}
-import collins.util.OutputType
+import collins.controllers.actions.SecureAction
+import collins.controllers.forms.statusFormat
+import collins.controllers.forms.truthyFormat
+import collins.controllers.forms.typeFormat
+import collins.models.Asset
+import collins.models.AssetLifecycle
+import collins.models.AssetType
+import collins.models.IpmiInfo
+import collins.models.{Status => AssetStatus}
+import collins.models.Truthy
 import collins.util.security.SecuritySpecification
-
-import play.api.data.Form
-import play.api.data.Forms.{optional, of, text, tuple}
-import play.api.mvc.Result
+import collins.validation.StringUtil
 
 case class CreateAction(
   _assetTag: Option[String],

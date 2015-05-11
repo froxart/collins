@@ -1,12 +1,24 @@
 package collins.models
 
-import play.api.libs.json.{Format, JsValue, JsSuccess, JsObject, Json, JsNumber, JsString}
-import org.squeryl.PrimitiveTypeMode._
+import scala.math.BigDecimal.int2bigDecimal
+
+import org.squeryl.PrimitiveTypeMode.__thisDsl
+import org.squeryl.PrimitiveTypeMode.from
+import org.squeryl.PrimitiveTypeMode.int2ScalarInt
+import org.squeryl.PrimitiveTypeMode.select
+import org.squeryl.PrimitiveTypeMode.string2ScalarString
 import org.squeryl.Schema
-import collins.models.shared.ValidatedEntity
+
+import play.api.libs.json.Format
+import play.api.libs.json.JsNumber
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsString
+import play.api.libs.json.JsSuccess
+import play.api.libs.json.JsValue
+import play.api.libs.json.Json
+
 import collins.models.shared.AnormAdapter
-
-
+import collins.models.shared.ValidatedEntity
 
 case class Status(name: String, description: String, id: Int = 0) extends ValidatedEntity[Int] {
   def getId(): Int = id

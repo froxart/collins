@@ -1,6 +1,9 @@
 package collins.controllers
 
-import collins.controllers.actions.state.{CreateAction, DeleteAction, GetAction, UpdateAction}
+import collins.controllers.actions.state.CreateAction
+import collins.controllers.actions.state.DeleteAction
+import collins.controllers.actions.state.GetAction
+import collins.controllers.actions.state.UpdateAction
 
 trait AssetStateApi {
   this: Api with SecureController =>

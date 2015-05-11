@@ -1,10 +1,12 @@
 package collins.util.config
 
-import collins.util.SystemTattler
-import com.typesafe.config.{ConfigException, ConfigFactory, ConfigObject}
-import play.api.Logger
-import java.io.File
 import java.util.concurrent.atomic.AtomicBoolean
+
+import play.api.Logger
+
+import com.typesafe.config.ConfigFactory
+
+import collins.util.SystemTattler
 
 trait Configurable extends ConfigAccessor with AppConfig { self =>
 

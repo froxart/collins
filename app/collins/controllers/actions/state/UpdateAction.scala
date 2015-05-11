@@ -1,6 +1,5 @@
 package collins.controllers.actions.state
 
-import collins.controllers.forms._
 import collins.controllers.validators.ParamValidation
 import collins.controllers.SecureController
 import collins.controllers.Api

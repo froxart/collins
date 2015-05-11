@@ -1,6 +1,7 @@
 package collins.util.security
 
-import collins.models.{User, UserImpl}
+import collins.models.User
+import collins.models.UserImpl
 
 class MockAuthenticationProvider extends AuthenticationProvider {
   override val authType = "default"

@@ -1,8 +1,11 @@
 package collins.util.views
 
-import collins.models.{State, Status}
-import play.api.libs.json.{Json, JsObject}
+import play.api.libs.json.JsObject
+import play.api.libs.json.Json
 import play.api.templates.Html
+
+import collins.models.State
+import collins.models.Status
 
 object StateHelper {
   import State.StateFormat._

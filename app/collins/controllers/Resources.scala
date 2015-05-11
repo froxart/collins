@@ -1,16 +1,18 @@
 package collins.controllers
 
-import actions.asset.{CreateAction, FindSimilarAction}
-import actions.resources.{FindAction, IntakeStage1Action, IntakeStage2Action, IntakeStage3Action}
+import play.api.mvc.Controller
 
+import collins.controllers.actions.asset.CreateAction
+import collins.controllers.actions.asset.FindSimilarAction
+import collins.controllers.actions.resources.FindAction
+import collins.controllers.actions.resources.IntakeStage1Action
+import collins.controllers.actions.resources.IntakeStage2Action
+import collins.controllers.actions.resources.IntakeStage3Action
 import collins.models.AssetMeta
 import collins.models.AssetType
 import collins.models.shared.PageParams
 
 import views.html
-
-import play.api.mvc.Controller
-import collins.solr.Solr
 
 trait Resources extends Controller {
   this: SecureController =>

@@ -1,30 +1,30 @@
 package collins.controllers
 
-import collins.controllers.actors.TestProcessor
-import collins.models.Asset
-import collins.util.OutputType
-import collins.util.TextOutput
-import collins.util.BashOutput
-import collins.util.JsonOutput
-import collins.util.HtmlOutput
-import collins.util.concurrent.BackgroundProcessor
-import collins.util.views.Formatter.dateFormat
-
-import play.api.libs.json.JsObject
-import play.api.libs.json.JsNumber
-import play.api.libs.json.JsValue
-import play.api.libs.json.Json
-import play.api.libs.json.JsBoolean
-import play.api.libs.json.JsString
-import play.api.libs.json.JsArray
-import play.api.mvc.Action
-import play.api.mvc.Result
-import play.api.mvc.Request
-import play.api.mvc.Results
-import play.api.mvc.AnyContent
-import play.api.mvc.AsyncResult
 import java.util.Date
 
+import play.api.libs.json.JsArray
+import play.api.libs.json.JsBoolean
+import play.api.libs.json.JsNumber
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsString
+import play.api.libs.json.JsValue
+import play.api.libs.json.Json
+import play.api.mvc.Action
+import play.api.mvc.AnyContent
+import play.api.mvc.AsyncResult
+import play.api.mvc.Request
+import play.api.mvc.Result
+import play.api.mvc.Results
+
+import collins.controllers.actors.TestProcessor
+import collins.models.Asset
+import collins.util.BashOutput
+import collins.util.HtmlOutput
+import collins.util.JsonOutput
+import collins.util.OutputType
+import collins.util.TextOutput
+import collins.util.concurrent.BackgroundProcessor
+import collins.util.views.Formatter
 
 private[controllers] case class ResponseData(status: Results.Status, data: JsValue, headers: Seq[(String,String)] = Nil, attachment: Option[AnyRef] = None) {
   def asResult(implicit req: Request[AnyContent]): Result =
@@ -55,7 +55,7 @@ IpAddressApi with AssetStateApi with AdminApi {
   def ping = Action { implicit req =>
     formatResponseData(ResponseData(Results.Ok, JsObject(Seq(
       "Data" -> JsObject(Seq(
-        "Timestamp" -> JsString(dateFormat(new Date())),
+        "Timestamp" -> JsString(Formatter.dateFormat(new Date())),
         "TestObj" -> JsObject(Seq(
           "TestString" -> JsString("test"),
           "TestList" -> JsArray(List(JsNumber(1), JsNumber(2)))

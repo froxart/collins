@@ -1,8 +1,16 @@
 package collins.models
 
-import collins.util._
-import lshw._
+import collins.models.lshw.Cpu
+import collins.models.lshw.Disk
+import collins.models.lshw.Memory
+import collins.models.lshw.Nic
+import collins.models.lshw.ServerBase
 import collins.models.shared.CommonHelper
+import collins.util.BitStorageUnit
+import collins.util.ByteStorageUnit
+import collins.util.LshwRepresentation
+
+import collins.models.AssetMeta.DynamicEnum._
 
 object LshwHelper extends CommonHelper[LshwRepresentation] {
   import AssetMeta.Enum._

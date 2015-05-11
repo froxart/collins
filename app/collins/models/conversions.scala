@@ -1,15 +1,29 @@
 package collins.models
 
-import collins.util.views.Formatter.{dateFormat, ISO_8601_FORMAT}
-import collins.util.IpAddress
-
-import play.api.libs.json.{Format, JsSuccess, JsValue, JsObject, Json}
-
-import java.util.Date
 import java.sql.Timestamp
-import org.squeryl.dsl.{NonNumericalExpression, StringExpression}
-import org.squeryl.dsl.ast.{BinaryOperatorNodeLogicalBoolean, ExpressionNode, LogicalBoolean, OrderByArg, TypedExpressionNode}
 import java.text.SimpleDateFormat
+import java.util.Date
+
+import org.squeryl.PrimitiveTypeMode._
+import org.squeryl.dsl.StringExpression
+import org.squeryl.dsl.ast.LogicalBoolean
+import org.squeryl.dsl.ast.TypedExpressionNode
+
+import play.api.libs.json.Format
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsSuccess
+import play.api.libs.json.JsValue
+import play.api.libs.json.Json
+
+import collins.util.IpAddress
+import collins.util.views.Formatter.ISO_8601_FORMAT
+import collins.util.views.Formatter.dateFormat
+
+import collins.models.IpmiInfo.Enum.IpmiAddress
+import collins.models.IpmiInfo.Enum.IpmiGateway
+import collins.models.IpmiInfo.Enum.IpmiNetmask
+import collins.models.IpmiInfo.Enum.IpmiPassword
+import collins.models.IpmiInfo.Enum.IpmiUsername
 
 object conversions {
   implicit def dateToTimestamp(date: Date) = new DateToTimestamp(date)

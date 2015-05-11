@@ -1,10 +1,7 @@
 package collins.models
 
-import collins.util.CryptoCodec
 import collins.util.config.Feature
-
-import conversions._
-import java.util.Date
+import collins.util.CryptoCodec
 /**
  * Provide a convenience wrapper on top of a row of meta/value data
  */

@@ -1,13 +1,23 @@
 package collins.models
 
-import play.api.libs.json.{Json, JsObject, JsNumber, JsString}
+import play.api.libs.json.Json
+import play.api.libs.json.JsObject
+import play.api.libs.json.JsNumber
+import play.api.libs.json.JsString
 
 import org.squeryl.PrimitiveTypeMode._
-import org.squeryl.{Schema, Table}
-import collins.solr.{SolrKey, SolrSingleValue, SolrIntValue, SolrDoubleValue, SolrBooleanValue, SolrStringValue}
+import org.squeryl.Schema
+import org.squeryl.Table
 
-import shared.{ValidatedEntity, AnormAdapter}
+import collins.solr.SolrKey
+import collins.solr.SolrSingleValue
+import collins.solr.SolrIntValue
+import collins.solr.SolrDoubleValue
+import collins.solr.SolrBooleanValue
+import collins.solr.SolrStringValue
 
+import collins.models.shared.ValidatedEntity
+import collins.models.shared.AnormAdapter
 
 case class AssetMeta(
     name: String,

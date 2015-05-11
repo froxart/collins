@@ -1,6 +1,8 @@
 package collins.config
 
-import play.api.{Application, Plugin}
+import play.api.Application
+import play.api.Plugin
+
 import collins.util.config.Registry
 
 class ConfigPlugin(app: Application) extends Plugin {

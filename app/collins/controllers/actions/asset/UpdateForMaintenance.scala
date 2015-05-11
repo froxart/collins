@@ -1,20 +1,23 @@
 package collins.controllers.actions.asset
 
-import collins.controllers.actions.SecureAction
-import collins.controllers.actions.AssetAction
-import collins.controllers.actions.RequestDataHolder
+import play.api.data.Form
+import play.api.data.Forms.of
+import play.api.data.Forms.text
+import play.api.data.Forms.tuple
 
 import collins.controllers.Api
 import collins.controllers.SecureController
-import collins.controllers.forms._
-import collins.validation.StringUtil
-import collins.models.{Asset, State, Status => AssetStatus}
+import collins.controllers.actions.AssetAction
+import collins.controllers.actions.RequestDataHolder
+import collins.controllers.actions.SecureAction
+import collins.controllers.forms.stateFormat
+import collins.controllers.forms.statusFormat
+import collins.models.State
+import collins.models.{Status => AssetStatus}
 import collins.util.MessageHelper
-import collins.util.security.SecuritySpecification
 import collins.util.plugins.Maintenance
-
-import play.api.data.Form
-import play.api.data.Forms.{tuple, of, text}
+import collins.util.security.SecuritySpecification
+import collins.validation.StringUtil
 
 object UpdateForMaintenance {
   object Messages extends MessageHelper("controllers.updateForMaintenance") {

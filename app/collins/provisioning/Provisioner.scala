@@ -1,7 +1,8 @@
 package collins.provisioning
 
-import collins.models.Asset
 import play.api.Logger
+
+import collins.models.Asset
 import collins.shell.CommandResult
 
 trait Provisioner {

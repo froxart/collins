@@ -1,15 +1,16 @@
 package collins.util
 
-import config.AppConfig
-import collins.models.IpmiInfo
-import concurrent.BackgroundProcess
-import collins.shell.CommandResult
-
-import scala.concurrent.duration.Duration
-import play.api.Logger
-import java.util.concurrent.TimeUnit
 import scala.collection.mutable.StringBuilder
-import scala.sys.process._
+import scala.concurrent.duration.Duration
+import scala.sys.process.Process
+import scala.sys.process.ProcessLogger
+
+import play.api.Logger
+
+import collins.models.IpmiInfo
+import collins.shell.CommandResult
+import collins.util.concurrent.BackgroundProcess
+import collins.util.config.AppConfig
 
 object IpmiCommand {
   type BackgroundResult = Tuple2[Option[Throwable], Option[Option[CommandResult]]]

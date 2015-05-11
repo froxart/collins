@@ -1,17 +1,21 @@
 package collins.controllers.actions.assettype
 
-import collins.controllers.Api
-import collins.controllers.SecureController
-import collins.validation.StringUtil
-
-import collins.controllers.actions.SecureAction
-import collins.controllers.actions.RequestDataHolder
-
-import collins.models.AssetType
 import play.api.data.Form
 import play.api.data.Forms.tuple
-import collins.util.security.SecuritySpecification
+
+import collins.controllers.Api
+import collins.controllers.SecureController
+import collins.controllers.actions.RequestDataHolder
+import collins.controllers.actions.SecureAction
 import collins.controllers.validators.ParamValidation
+import collins.models.AssetType
+import collins.util.security.SecuritySpecification
+import collins.validation.StringUtil
+
+import collins.controllers.actions.assettype.CreateAction.Messages.fuck
+import collins.controllers.actions.assettype.CreateAction.Messages.invalidLabel
+import collins.controllers.actions.assettype.CreateAction.Messages.invalidName
+import collins.controllers.actions.assettype.DeleteAction.Messages.systemName
 
 /**
  * Update a asset type

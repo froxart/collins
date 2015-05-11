@@ -1,22 +1,36 @@
 package collins.controllers.actions.asset
 
-import collins.controllers.actions.RequestDataHolder
-import collins.controllers.forms._
-
-import collins.validation.StringUtil
-import collins.solr.SolrExpression
-import collins.models.{AssetFinder, AssetType, State, Status => AssetStatus, Truthy}
-import collins.util.{AttributeResolver, MessageHelper}
-import collins.util.AttributeResolver.{ResultTuple => ResolvedAttributes}
-import collins.util.views.Formatter.ISO_8601_FORMAT
+import java.util.Date
 
 import play.api.Logger
 import play.api.data.Form
-import play.api.data.Forms.{tuple, optional, text, list, of, date}
+import play.api.data.Forms.date
+import play.api.data.Forms.list
+import play.api.data.Forms.of
+import play.api.data.Forms.optional
+import play.api.data.Forms.text
+import play.api.data.Forms.tuple
 import play.api.data.validation.Constraints.pattern
-import play.api.mvc.{AnyContent, Request, Result}
+import play.api.mvc.AnyContent
+import play.api.mvc.Request
 
-import java.util.Date
+import collins.controllers.actions.RequestDataHolder
+import collins.controllers.forms.SolrExpressionFormat
+import collins.controllers.forms.stateFormat
+import collins.controllers.forms.statusFormat
+import collins.controllers.forms.truthyFormat
+import collins.controllers.forms.typeFormat
+import collins.models.AssetFinder
+import collins.models.AssetType
+import collins.models.State
+import collins.models.{Status => AssetStatus}
+import collins.models.Truthy
+import collins.solr.SolrExpression
+import collins.util.AttributeResolver
+import collins.util.AttributeResolver.{ResultTuple => ResolvedAttributes}
+import collins.util.MessageHelper
+import collins.util.views.Formatter.ISO_8601_FORMAT
+import collins.validation.StringUtil
 
 case class AssetFinderDataHolder(
   assetFinder: AssetFinder,

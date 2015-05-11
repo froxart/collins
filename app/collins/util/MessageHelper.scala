@@ -1,6 +1,7 @@
 package collins.util
 
-import play.api.i18n.{Lang, Messages}
+import play.api.i18n.Lang
+import play.api.i18n.Messages
 
 trait MessageHelperI {
   val parentKey: String

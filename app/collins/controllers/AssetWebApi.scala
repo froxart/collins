@@ -1,18 +1,17 @@
 package collins.controllers
 
-import collins.controllers.actions.asset.DeleteAction
-import collins.controllers.actors.AssetCancelProcessor
-import collins.models.Asset
-import collins.util.UserTattler
-import collins.util.config.AppConfig
-import collins.util.concurrent.BackgroundProcessor
-
+import play.api.libs.json.JsNumber
+import play.api.libs.json.JsObject
 import play.api.mvc.Action
 import play.api.mvc.AsyncResult
 import play.api.mvc.Results
 
-import play.api.libs.json.JsObject
-import play.api.libs.json.JsNumber
+import collins.controllers.actions.asset.DeleteAction
+import collins.controllers.actors.AssetCancelProcessor
+import collins.models.Asset
+import collins.util.UserTattler
+import collins.util.concurrent.BackgroundProcessor
+import collins.util.config.AppConfig
 
 trait AssetWebApi {
   this: Api with SecureController =>

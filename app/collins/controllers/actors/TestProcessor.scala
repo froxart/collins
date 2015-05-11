@@ -1,6 +1,8 @@
 package collins.controllers.actors
 
-import scala.concurrent.duration._
+import scala.concurrent.duration.DurationInt
+import scala.concurrent.duration.FiniteDuration
+
 import collins.util.concurrent.BackgroundProcess
 
 case class TestProcessor(sleepMs: Long, userTimeout: Option[FiniteDuration] = None)

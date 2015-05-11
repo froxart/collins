@@ -1,7 +1,12 @@
 package collins.controllers
 
-import collins.controllers.actions.ipaddress.{ CreateAction, UpdateAction, DeleteAction, FindAssetAction, FindAssetsByPoolAction, FindByAssetAction, GetPoolsAction }
-
+import collins.controllers.actions.ipaddress.CreateAction
+import collins.controllers.actions.ipaddress.DeleteAction
+import collins.controllers.actions.ipaddress.FindAssetAction
+import collins.controllers.actions.ipaddress.FindAssetsByPoolAction
+import collins.controllers.actions.ipaddress.FindByAssetAction
+import collins.controllers.actions.ipaddress.GetPoolsAction
+import collins.controllers.actions.ipaddress.UpdateAction
 import collins.models.Truthy
 
 trait IpAddressApi {

@@ -1,12 +1,10 @@
 package collins.controllers.actions
 
-import collins.models.User
+import java.util.concurrent.ConcurrentHashMap
+import java.util.concurrent.atomic.AtomicReference
 
 import play.api.mvc.Results
 import play.api.mvc.Results.{Status => HttpStatus}
-
-import java.util.concurrent.ConcurrentHashMap
-import java.util.concurrent.atomic.AtomicReference
 
 trait RequestDataHolder {
   type This = RequestDataHolder

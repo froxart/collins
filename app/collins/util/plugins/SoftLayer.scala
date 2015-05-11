@@ -1,11 +1,12 @@
 package collins.util.plugins
 
+import play.api.Play
+
 import collins.models.Asset
 import collins.models.asset.AssetView
 import collins.provisioning.ProvisionerConfig
-import collins.softlayer.{SoftLayerConfig, SoftLayerPlugin}
-
-import play.api.Play
+import collins.softlayer.SoftLayerConfig
+import collins.softlayer.SoftLayerPlugin
 
 object SoftLayer {
 

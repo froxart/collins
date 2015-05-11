@@ -1,14 +1,12 @@
 package collins.controllers.actions.resources
 
-import collins.controllers.actions.SecureAction
 import collins.controllers.actions.AssetAction
 import collins.controllers.actions.EphemeralDataHolder
 import collins.controllers.actions.RequestDataHolder
-
-import collins.validation.StringUtil
+import collins.controllers.actions.SecureAction
 import collins.models.AssetMeta.Enum.ChassisTag
 import collins.util.MessageHelperI
-
+import collins.validation.StringUtil
 
 trait IntakeAction extends AssetAction with MessageHelperI {
   this: SecureAction =>

@@ -1,12 +1,17 @@
 package collins.controllers.actors
 
-import scala.concurrent.duration._
-import play.api.mvc.{AnyContent, Request}
+import java.util.concurrent.TimeUnit
+
+import scala.concurrent.Await
+import scala.concurrent.duration.Duration
+import scala.concurrent.duration.FiniteDuration
+
+import play.api.mvc.AnyContent
+import play.api.mvc.Request
+
+import collins.softlayer.SoftLayerConfig
 import collins.util.concurrent.BackgroundProcess
 import collins.util.plugins.SoftLayer
-import scala.concurrent.{Await, Future}
-import java.util.concurrent.TimeUnit
-import collins.softlayer.SoftLayerConfig
 
 case class ActivationProcessor(slId: Long, userTimeout: Option[FiniteDuration] = None)(implicit req: Request[AnyContent]) extends BackgroundProcess[Boolean] {
   val timeout = userTimeout.getOrElse(Duration(SoftLayerConfig.activationRequestTimeoutMs, TimeUnit.MILLISECONDS))
